@@ -19,9 +19,9 @@
 					// Open the Magnific Popup and display the product details
 					$.magnificPopup.open({
 						items: {
-							src: '<div class="product-details">' + response + '</div>'
+							src: response
 						},
-						type: 'inline',
+						type: 'ajax',
 						mainClass: 'mfp-fade',
 						closeBtnInside: true,
 						closeOnBgClick: true,
