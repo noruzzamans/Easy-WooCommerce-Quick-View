@@ -76,7 +76,6 @@ class Easy_Woocommerce_Quick_View_Public {
 
 		wp_localize_script($this->plugin_name, 'easy_woocommerce_quick_view', array(
 			'ajax_url' => admin_url('admin-ajax.php'),
-			'action'   => 'easy_woocommerce_quick_view',
 			'nonce'    => wp_create_nonce( 'easy_woocommerce_quick_view_nonce' ),
 		));
 
