@@ -18,7 +18,7 @@ class Easy_WooCommerce_Quick_View_Ajax {
 		$product = wc_get_product( $product_id );
 		$product_name = $product->get_name();
 		$product_price = $product->get_price_html();
-		$product_description = $product->get_description();
+		$product_short_description = $product->get_short_description(); // Updated line
 		$product_image_url = wp_get_attachment_image_url( get_post_thumbnail_id( $product_id ), 'full' );
 
 		// Build the product details HTML
@@ -31,7 +31,7 @@ class Easy_WooCommerce_Quick_View_Ajax {
 		$html .= '<div class="product-info">';
 		$html .= '<h2>' . $product_name . '</h2>';
 		$html .= '<p><strong>Price: </strong>' . $product_price . '</p>';
-		$html .= '<div>' . $product_description . '</div>';
+		$html .= '<div class="woocommerce-product-details__short-description">' . $product_short_description . '</div>';
 		// Add the form under the product description
 		$html .= '<form class="cart" action="" method="post" enctype="multipart/form-data">';
 		$html .= '<div class="quantity">';
