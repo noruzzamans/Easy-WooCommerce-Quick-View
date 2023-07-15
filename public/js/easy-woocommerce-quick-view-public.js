@@ -21,7 +21,7 @@
 						items: {
 							src: response
 						},
-						type: 'ajax',
+						type: 'inline',
 						mainClass: 'mfp-fade',
 						closeBtnInside: true,
 						closeOnBgClick: true,
