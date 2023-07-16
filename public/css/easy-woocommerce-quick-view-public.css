@@ -4,8 +4,8 @@
  */
 
  .product-details {
-    max-width: 876px;
-    max-height: 438px;
+    max-width: 800px;
+    max-height: 450px;
     background: #ffffff;
     opacity: 1;
     transform: translateY(0);
@@ -39,5 +39,14 @@
     margin: 0;
     padding: 20px;
     height: auto;
+}
+
+.easy-cart {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.product-meta span.sku_wrapper {
+    display: block;
 }
 

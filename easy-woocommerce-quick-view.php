@@ -15,7 +15,7 @@
  * @wordpress-plugin
  * Plugin Name:       Easy WooCommerce Quick View
  * Plugin URI:        https://#
- * Description:       WooCommerce Quick View is a convenient and time-saving feature designed for online stores powered by WooCommerce, a popular e-commerce platform.
+ * Description:       Easy WooCommerce Quick View is a convenient and time-saving feature designed for online stores powered by WooCommerce, a popular e-commerce platform.
  * Version:           1.0.0
  * Author:            Noruzzaman
  * Author URI:        https://github.com/noruzzamanrubel
