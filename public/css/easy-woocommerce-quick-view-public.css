@@ -32,21 +32,12 @@
     max-width: 100%;
     max-height: 438px;
 }
-.product-info {
+.summary.entry-summary {
     padding: 20px;
     width: 50%;
     overflow: auto;
     margin: 0;
     padding: 20px;
     height: auto;
-}
-
-.easy-cart {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-}
-.product-meta span.sku_wrapper {
-    display: block;
 }
 
