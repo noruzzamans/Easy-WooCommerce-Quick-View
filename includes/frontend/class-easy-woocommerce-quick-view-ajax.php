@@ -5,6 +5,31 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 class Easy_WooCommerce_Quick_View_Ajax {
 
+	/**
+     * The single instance of the class.
+     */
+    protected static $instance;
+
+    /**
+     * Returns single instance of the class
+     */
+    public static function get_instance() {
+        if ( is_null( self::$instance ) ) {
+            self::$instance = new self();
+        }
+
+        return self::$instance;
+    }
+
+	public function __construct() {
+		add_action( 'easy_wqv_product_summary', 'woocommerce_template_single_title', 5 );
+		add_action( 'easy_wqv_product_summary', 'woocommerce_template_single_rating', 10 );
+		add_action( 'easy_wqv_product_summary', 'woocommerce_template_single_price', 15 );
+		add_action( 'easy_wqv_product_summary', 'woocommerce_template_single_excerpt', 20 );
+		add_action( 'easy_wqv_product_summary', 'woocommerce_template_single_add_to_cart', 25 );
+		add_action( 'easy_wqv_product_summary', 'woocommerce_template_single_meta', 30 );
+	}
+
 	public function easy_woocommerce_quick_view() {
 		$nonce = $_POST['nonce'];
 
@@ -29,8 +54,8 @@ class Easy_WooCommerce_Quick_View_Ajax {
 						</div>
 					</div>
 				</div>
-				<div class="summary entry-summary">
-					<?php do_action( 'woocommerce_single_product_summary'); ?>
+				<div class="summary entry-summary easy-wqv-info-wrapper">
+					<?php do_action( 'easy_wqv_product_summary'); ?>
 				</div>
 			</div>
 			<?php

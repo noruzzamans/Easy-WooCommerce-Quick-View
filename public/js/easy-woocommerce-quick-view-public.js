@@ -4,7 +4,7 @@
 	$(document).ready(function() {
 		$('.easy_woo_quick_view_btn').on('click', function(e) {
 			e.preventDefault();
-			var productId = $(this).data('product-id');
+			let productId = $(this).data('product-id');
 
 			// AJAX request to retrieve the product details
 			$.ajax({
@@ -22,7 +22,7 @@
 							src: response
 						},
 						type: 'inline',
-						mainClass: 'mfp-fade',
+						mainClass: 'mfp-ewqv',
 						closeBtnInside: true,
 						closeOnBgClick: true,
 						showCloseBtn: true,
