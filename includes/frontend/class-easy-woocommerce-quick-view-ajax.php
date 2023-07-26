@@ -22,14 +22,20 @@ class Easy_WooCommerce_Quick_View_Ajax {
     }
 
 	public function __construct() {
+
 		add_action( 'easy_wqv_product_summary', 'woocommerce_template_single_title', 5 );
 		add_action( 'easy_wqv_product_summary', 'woocommerce_template_single_rating', 10 );
 		add_action( 'easy_wqv_product_summary', 'woocommerce_template_single_price', 15 );
 		add_action( 'easy_wqv_product_summary', 'woocommerce_template_single_excerpt', 20 );
 		add_action( 'easy_wqv_product_summary', 'woocommerce_template_single_add_to_cart', 25 );
 		add_action( 'easy_wqv_product_summary', 'woocommerce_template_single_meta', 30 );
+
+		add_filter( 'woocommerce_add_to_cart_form_action', array( $this, 'easy_woocommerce_quick_view_avoid_redirecting_to_single_page' ), 10, 1 );
 	}
 
+	/**
+	 * Ajax callback function
+	 */
 	public function easy_woocommerce_quick_view() {
 		$nonce = $_POST['nonce'];
 
@@ -62,6 +68,24 @@ class Easy_WooCommerce_Quick_View_Ajax {
 			wp_reset_postdata();
 		}
 		wp_die();
+	}
+
+	/**
+	 * Check if is quick view
+	 */
+	public function easy_woocommerce_quick_view_is_quick_view() {
+        // phpcs:ignore WordPress.Security.NonceVerification.Recommended
+        return ( defined( 'DOING_AJAX' ) && DOING_AJAX && isset( $_REQUEST['action'] ) && 'easy_woocommerce_quick_view' === $_REQUEST['action'] );
+    }
+
+	/**
+	 * Avoid redirect to single product page on add to cart action in quick view
+	 */
+	public function easy_woocommerce_quick_view_avoid_redirecting_to_single_page($value){
+		if ( $this->easy_woocommerce_quick_view_is_quick_view() ) {
+            return '';
+        }
+        return $value;
 	}
 
 }
