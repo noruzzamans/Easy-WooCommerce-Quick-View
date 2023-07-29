@@ -26,8 +26,13 @@
 						closeBtnInside: true,
 						closeOnBgClick: true,
 						showCloseBtn: true,
-						// Add any other options you need
 					});
+					if (typeof wc_add_to_cart_variation_params !== 'undefined') {
+						var form_variation = $('.product-details').find('.variations_form');
+						form_variation.each(function () {
+							$(this).wc_variation_form();
+						});
+					}
 				},
 				error: function() {
 					console.log('Error retrieving product details.');
