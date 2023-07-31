@@ -53,18 +53,16 @@ class Easy_WooCommerce_Quick_View_Ajax {
 			$post = get_post( $product_id );
 			setup_postdata( $post );
 			?>
-			<div class="woocommerce product-details">
-				<div id="product-<?php the_ID(); ?>" <?php wc_product_class( '', $product ); ?>>
-					<div class="easy-product-images">
-						<div class="easy-product-images-slider">
-							<div class="easy-product-image"><img src="<?php echo $product_image_url; ?>" alt="<?php echo $product_name; ?>">
+			<div class="easy-wqv-product-modal">
+				<div class="easy-wqv-product-images">
+					<div class="easy-wqv-product-images-slider">
+							<div class="easy-wqv-product-image"><img src="<?php echo $product_image_url; ?>" alt="<?php echo $product_name; ?>">
 							</div>
-						</div>
 					</div>
-					<div class="summary entry-summary easy-wqv-info-wrapper">
-						<div class="summary-content">
-							<?php do_action( 'easy_wqv_product_summary'); ?>
-						</div>
+				</div>
+				<div class="summary entry-summary easy-wqv-summary-wrapper">
+					<div class="summary-content easy-wqv-summary-content">
+						<?php do_action( 'easy_wqv_product_summary'); ?>
 					</div>
 				</div>
 			</div>

@@ -1,171 +1,139 @@
-/**
- * All of the CSS for your public-facing functionality should be
- * included in this file.
- */
-
- .product-details {
-    max-width: 800px;
-    max-height: 450px;
-    background: #ffffff;
-    opacity: 1;
-    transform: translateY(0);
-    transition: all 0.2s;
-    position: relative;
-    width: 90%;
-    margin: 0 auto;
-    padding: 0px;
-    box-sizing: border-box;
-    display: flex;
- }
- /* .easy-product-images {
+.easy-wqv-product-modal {
+  max-width: 900px;
+  max-height: 450px;
+  background: #ffffff;
+  opacity: 1;
+  transform: translateY(0);
+  transition: all 0.2s;
+  position: relative;
+  width: 90%;
+  margin: 0 auto;
+  padding: 0px;
+  box-sizing: border-box;
+  display: flex; }
+  .easy-wqv-product-modal .easy-wqv-product-images {
     width: 50%;
     overflow: hidden;
     position: relative;
-    height: auto;
- } */
-.easy-product-images img {
-    border-radius: 0 !important;
-    box-shadow: inherit !important;
-    display: block;
-    width: 100%;
-    height: auto;
-    max-width: 100%;
-    max-height: 438px;
-}
-/* .easy-wqv-info-wrapper {
+    height: auto; }
+    .easy-wqv-product-modal .easy-wqv-product-images .easy-wqv-product-images-slider .easy-wqv-product-image img {
+      height: auto;
+      max-width: 100%;
+      border-radius: 0 !important;
+      box-shadow: inherit !important;
+      display: block;
+      width: 100%; }
+  .easy-wqv-product-modal .easy-wqv-summary-wrapper {
     width: 50%;
     overflow: auto;
     margin: 0 !important;
-    padding: 20px;
     height: auto;
-} */
-
-.easy-wqv-info-wrapper .product_title.entry-title {
-    clear: none;
-    margin-top: 0;
-    padding: 0;
-    margin-bottom: 0;
-}
-
-.easy-wqv-info-wrapper .price {
-    color: #77a464;
-    font-size: 1.25em;
-    margin: 15px 0 !important;
-}
-
-.easy-wqv-info-wrapper .price del {
-    opacity: .5;
-    display: inline-block;
-}
-.easy-wqv-info-wrapper .price ins {
-    font-weight: 700;
-    display: inline-block;
-}
-
-.easy-wqv-info-wrapper .cart {
-    margin-bottom: 15px;
-}
-.easy-wqv-info-wrapper .cart .quantity {
-    display: inline-block;
-}
-.easy-wqv-info-wrapper .cart .quantity .qty{
-    max-width: 60px;
-    border-radius: 1px;
-    margin: 0 10px 0 0;
-    padding: 0 4px;
-    background-color: #f2f2f2;
-    color: #43454b;
-    outline: 0;
-    border: 0;
-    box-sizing: border-box;
-    font-weight: 400;
-    box-shadow: 0 0 0;
+    padding: 20px; }
+    .easy-wqv-product-modal .easy-wqv-summary-wrapper .easy-wqv-summary-content {
+      height: 100%;
+      padding: 20px;
+      max-height: 450px;
+      max-width: 900px;
+      position: relative;
+      overflow-y: scroll; }
+      .easy-wqv-product-modal .easy-wqv-summary-wrapper .easy-wqv-summary-content::-webkit-scrollbar {
+        width: 5px; }
+      .easy-wqv-product-modal .easy-wqv-summary-wrapper .easy-wqv-summary-content::-webkit-scrollbar-thumb {
+        opacity: 0;
+        visibility: hidden;
+        transition: 0.5s ease-in-out;
+        background: #333333;
+        border-radius: 10px; }
+      .easy-wqv-product-modal .easy-wqv-summary-wrapper .easy-wqv-summary-content:hover::-webkit-scrollbar-thumb {
+        opacity: 1;
+        visibility: visible; }
+    .easy-wqv-product-modal .easy-wqv-summary-wrapper .product_title.entry-title {
+      clear: none;
+      padding: 0;
+      font-size: 24px;
+      margin: 0px !important;
+      line-height: 20px !important;
+      font-weight: 700;
+      text-transform: none; }
+    .easy-wqv-product-modal .easy-wqv-summary-wrapper .price {
+      color: #77a464;
+      font-size: 1.25em;
+      margin: 15px 0 !important; }
+      .easy-wqv-product-modal .easy-wqv-summary-wrapper .price del {
+        opacity: .5;
+        display: inline-block; }
+      .easy-wqv-product-modal .easy-wqv-summary-wrapper .price ins {
+        font-weight: 700;
+        display: inline-block; }
+    .easy-wqv-product-modal .easy-wqv-summary-wrapper .woocommerce-product-details__short-description p {
+      margin-bottom: 15px; }
+    .easy-wqv-product-modal .easy-wqv-summary-wrapper .cart {
+      margin-bottom: 15px !important; }
+      .easy-wqv-product-modal .easy-wqv-summary-wrapper .cart .quantity {
+        display: inline-block; }
+        .easy-wqv-product-modal .easy-wqv-summary-wrapper .cart .quantity .qty {
+          max-width: 60px;
+          border-radius: 1px;
+          margin: 0 10px 0 0;
+          padding: 0 4px;
+          background-color: #f2f2f2;
+          color: #43454b;
+          outline: 0;
+          border: 0;
+          box-sizing: border-box;
+          font-weight: 400;
+          box-shadow: 0 0 0;
+          text-align: center;
+          line-height: 35px; }
+      .easy-wqv-product-modal .easy-wqv-summary-wrapper .cart .single_add_to_cart_button {
+        color: #ffffff;
+        background: #333333;
+        padding: 0px 16px;
+        line-height: 35px; }
+      .easy-wqv-product-modal .easy-wqv-summary-wrapper .cart .variations {
+        border: 0; }
+        .easy-wqv-product-modal .easy-wqv-summary-wrapper .cart .variations tbody tr th {
+          border: 0; }
+        .easy-wqv-product-modal .easy-wqv-summary-wrapper .cart .variations tbody tr td {
+          padding-left: 0;
+          border: 0; }
+          .easy-wqv-product-modal .easy-wqv-summary-wrapper .cart .variations tbody tr td select {
+            max-width: 100%;
+            min-width: 75%;
+            display: inline-block;
+            margin-right: 20px; }
+    .easy-wqv-product-modal .easy-wqv-summary-wrapper .product_meta .sku_wrapper {
+      display: block;
+      padding: 10px 0px;
+      border-top: 1px solid #eaecee;
+      color: #777777;
+      font-size: 12px;
+      line-height: 18px;
+      text-align: left;
+      font-weight: normal; }
+    .easy-wqv-product-modal .easy-wqv-summary-wrapper .product_meta .posted_in {
+      display: block;
+      padding: 10px 0px;
+      border-top: 1px solid #eaecee;
+      color: #777777;
+      font-size: 12px;
+      line-height: 18px;
+      text-align: left;
+      font-weight: normal; }
+  .easy-wqv-product-modal .mfp-close {
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
     text-align: center;
-    line-height: 35px;
-}
+    transition: ease-in-out .2s; }
+    .easy-wqv-product-modal .mfp-close:hover {
+      background: #a46497;
+      color: #ffffff; }
 
-.easy-wqv-info-wrapper .cart .single_add_to_cart_button {
-    color: #ffffff;
-    background: #333333;
-    padding: 0px 16px;
-    line-height: 35px;
-}
-.easy-wqv-info-wrapper .product_meta .sku_wrapper {
-    display: block;
-    padding: 10px 0px;
-    border-top: 1px solid #eaecee;
-    color: #777777;
-    font-size: 12px;
-    line-height: 18px;
-    text-align: left;
-    font-weight: normal;
-}
-.easy-wqv-info-wrapper .product_meta .posted_in {
-    display: block;
-    padding: 10px 0px;
-    border-top: 1px solid #eaecee;
-    color: #777777;
-    font-size: 12px;
-    line-height: 18px;
-    text-align: left;
-    font-weight: normal;
-}
-.product-details .mfp-close {
-    width: 30px;
-    height: 30px;
-    line-height: 30px;
-    text-align: center;
-    margin-right: 15px;
-}
-.product-details .mfp-close:hover {
-    background: transparent; 
-}
-.mfp-bg.mfp-ewqv {
-    background: rgba( 0, 0, 0, 0.8);
-}
+.mfp-bg .mfp-ewqv {
+  background: rgba(0, 0, 0, 0.8); }
 
-.mfp-wrap.mfp-ewqv {
-    z-index: 999999;
-}
+.mfp-wrap .mfp-ewqv {
+  z-index: 999999; }
 
-.easy-wqv-info-wrapper .cart .variations {
-    border: 0;
-}
-
-.easy-wqv-info-wrapper .cart .variations tbody tr th {
-    border: 0;
-}
-.easy-wqv-info-wrapper .cart .variations tbody tr td {
-    padding-left: 0;
-    border: 0;
-}
-.easy-wqv-info-wrapper .cart .variations tbody tr td select {
-    max-width: 100%;
-    min-width: 75%;
-    display: inline-block;
-    margin-right: 20px;
-}
-.easy-wqv-info-wrapper .cart .variations tbody tr td  a.reset_variations{
-    /* display: none; */
-}
-
-.product-details > .product {
-    display: flex !important;
-    float: none !important;
-}
-
-.product-details > .product > div {
-    width: 50% !important;
-    float: none !important;
-    margin: 0 !important;
-    height: 450px;
-    overflow: auto;
-}
-
-.product-details > .product .summary .summary-content {
-    height: 100%;
-    overflow-x: hidden;
-    overflow-y: auto;
-    position: relative;
-    padding: 20px;
-}
+/*# sourceMappingURL=easy-woocommerce-quick-view-public.css.map */

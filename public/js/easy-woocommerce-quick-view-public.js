@@ -28,7 +28,7 @@
 						showCloseBtn: true,
 					});
 					if (typeof wc_add_to_cart_variation_params !== 'undefined') {
-						var form_variation = $('.product-details').find('.variations_form');
+						var form_variation = $('.easy-wqv-product-modal').find('.variations_form');
 						form_variation.each(function () {
 							$(this).wc_variation_form();
 						});
