@@ -58,6 +58,22 @@ class Easy_Woocommerce_Quick_View {
 	protected $version;
 
 	/**
+	 * The single instance of the class.
+	 */
+	protected static $instance;
+
+	/**
+	 * Returns single instance of the class
+	 */
+	public static function get_instance() {
+		if ( is_null( self::$instance ) ) {
+			self::$instance = new self();
+		}
+
+		return self::$instance;
+	}
+
+	/**
 	 * Define the core functionality of the plugin.
 	 *
 	 * Set the plugin name and the plugin version that can be used throughout the plugin.
@@ -78,8 +94,6 @@ class Easy_Woocommerce_Quick_View {
 		$this->set_locale();
 		$this->define_admin_hooks();
 		$this->define_public_hooks();
-		$this->register_easy_woo_quick_view_btn();
-		$this->register_ajax_hooks();
 
 	}
 
@@ -219,25 +233,6 @@ class Easy_Woocommerce_Quick_View {
 		return $this->version;
 	}
 
-	/**
-     * Register plugin Quick View Page.
-     *
-     * @access   private
-     */
-	private function register_easy_woo_quick_view_btn() {
-        $plugin_pages = new Easy_WooCommerce_Quick_View_Btn();
-		$plugin_pages->render_easy_woo_quick_view_btn();
-    }
-
-	/**
-     * Register ajax hooks.
-     *
-     * @access   private
-     */
-    private function register_ajax_hooks() {
-		$plugin_ajax = new Easy_WooCommerce_Quick_View_Ajax();
-		$this->loader->add_action( 'wp_ajax_easy_woocommerce_quick_view', $plugin_ajax, 'easy_woocommerce_quick_view' );
-        $this->loader->add_action( 'wp_ajax_nopriv_easy_woocommerce_quick_view', $plugin_ajax, 'easy_woocommerce_quick_view' );
-	}
-
 }
+
+

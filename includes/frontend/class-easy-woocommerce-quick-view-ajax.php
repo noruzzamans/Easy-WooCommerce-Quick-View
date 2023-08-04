@@ -23,6 +23,9 @@ class Easy_WooCommerce_Quick_View_Ajax {
 
 	public function __construct() {
 
+		add_action( 'wp_ajax_easy_woocommerce_quick_view', [$this, 'easy_woocommerce_quick_view'] );
+        add_action( 'wp_ajax_nopriv_easy_woocommerce_quick_view', [$this, 'easy_woocommerce_quick_view'] );
+
 		add_action( 'easy_wqv_product_summary', 'woocommerce_template_single_title', 5 );
 		add_action( 'easy_wqv_product_summary', 'woocommerce_template_single_rating', 10 );
 		add_action( 'easy_wqv_product_summary', 'woocommerce_template_single_price', 15 );
@@ -91,3 +94,4 @@ class Easy_WooCommerce_Quick_View_Ajax {
 	}
 
 }
+Easy_WooCommerce_Quick_View_Ajax::get_instance();

@@ -80,8 +80,7 @@ require plugin_dir_path( __FILE__ ) . 'includes/class-easy-woocommerce-quick-vie
  * @since    1.0.0
  */
 function run_easy_woocommerce_quick_view() {
-
-	$plugin = new Easy_Woocommerce_Quick_View();
+	$plugin = Easy_Woocommerce_Quick_View::get_instance();
 	$plugin->run();
 
 }
