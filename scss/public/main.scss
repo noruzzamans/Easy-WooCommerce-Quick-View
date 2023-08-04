@@ -11,11 +11,20 @@
     padding: 0px;
     box-sizing: border-box;
     display: flex;
+    @media only screen and (max-width: 767px) { 
+        max-width: 430px;
+        max-height: inherit;
+        display: block;
+    }
     .easy-wqv-product-images {
         width: 50%;
         overflow: hidden;
         position: relative;
         height: auto;
+        @media only screen and (max-width: 767px) { 
+            width: 100%;
+            height: auto;
+        }
         .easy-wqv-product-images-slider {
             .easy-wqv-product-image {
                 img {
@@ -35,6 +44,10 @@
         margin: 0 !important;
         height: auto;
         padding: 20px;
+        @media only screen and (max-width: 767px) { 
+            width: 100%;
+            height: auto;
+        }
         .easy-wqv-summary-content {
             height: 100%;
             padding: 20px;
@@ -42,7 +55,11 @@
             max-width: 900px;
             position: relative;
             overflow-y: scroll;
-
+            @media only screen and (max-width: 767px) { 
+                width: 100%;
+                height: auto;
+                padding: 0;
+            }
             &::-webkit-scrollbar {
                 width: 5px;
             }
@@ -138,6 +155,25 @@
                 }
             }
         }
+        .variations_form {
+            .variations {
+                margin-bottom: 20px;
+            }
+            .single_variation_wrap {
+                .woocommerce-variation {
+                    &.single_variation {
+                        .woocommerce-variation-description {
+                            p {
+                                margin-bottom: 15px;
+                            }
+                        }
+                        .woocommerce-variation-price {
+                            margin-bottom: 15px;
+                        }
+                    }
+                }
+            }
+        }
         .product_meta {
             .sku_wrapper {
                 display: block;
@@ -175,12 +211,23 @@
 }
 
 .mfp-bg{
-    .mfp-ewqv {
-        background: rgba( 0, 0, 0, 0.8);
-    }
-}
-.mfp-wrap {
-    .mfp-ewqv {
+    &.mfp-ewqv {
         z-index: 999999;
     }
 }
+.mfp-wrap {
+    &.mfp-ewqv {
+        z-index: 999999;
+    }
+}
+
+// .easy_woo_quick_view_btn {
+//    &.button {
+//     margin: 10px !important;
+//     display: inline-block !important;
+//     @media only screen and (max-width: 767px) { 
+//         margin: 0px !important;
+//         display: block !important;
+//     }
+//    }
+// }
