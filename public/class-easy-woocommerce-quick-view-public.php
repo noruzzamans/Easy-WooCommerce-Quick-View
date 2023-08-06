@@ -60,6 +60,7 @@ class Easy_Woocommerce_Quick_View_Public {
 	 * @since    1.0.0
 	 */
 	public function enqueue_styles() {
+		wp_enqueue_style( 'lightslider-css', 'https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css', array(), '1.1.6' );
 		wp_enqueue_style( $this->plugin_name.'-magnific', plugin_dir_url( __FILE__ ) . 'css/easy-woocommerce-quick-view-public-magnific.css', array(), $this->version, 'all' );
 		wp_enqueue_style( $this->plugin_name, plugin_dir_url( __FILE__ ) . 'css/easy-woocommerce-quick-view-public.css', array(), $this->version, 'all' );
 
@@ -72,6 +73,7 @@ class Easy_Woocommerce_Quick_View_Public {
 	 */
 	public function enqueue_scripts() {
 		wp_enqueue_script( 'wc-add-to-cart-variation' );
+		wp_enqueue_script( 'lightslider-js', 'https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js', array( 'jquery' ), '1.1.6', true );
 		wp_enqueue_script( $this->plugin_name.'-magnific', plugin_dir_url( __FILE__ ) . 'js/easy-woocommerce-quick-view-public-magnific.js', array( 'jquery' ), $this->version, false );
 		wp_enqueue_script( $this->plugin_name, plugin_dir_url( __FILE__ ) . 'js/easy-woocommerce-quick-view-public.js', array( 'jquery' ), $this->version, false );
 

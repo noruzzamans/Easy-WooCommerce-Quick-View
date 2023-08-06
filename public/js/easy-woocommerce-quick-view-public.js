@@ -33,6 +33,24 @@
 							$(this).wc_variation_form();
 						});
 					}
+
+					// $('#easy-wqv-image-slider').lightSlider({
+					// 	gallery: true,
+					// 	item: 1,
+					// 	loop: true,
+					// 	slideMargin: 0,
+					// 	thumbItem: 4,
+					// 	enableDrag: false,
+					// 	currentPagerPosition: 'left',
+					// });
+					$('#easy-wqv-image-slider').slick({
+						// autoplay: true,
+						// autoplaySpeed: 2000,
+						dots: true,
+						infinite: true,
+						slidesToShow: 1,
+						slidesToScroll: 1
+					});
 				},
 				error: function() {
 					console.log('Error retrieving product details.');
