@@ -209,9 +209,9 @@
         }
     }
     .slick-arrow {
-        width: 44px;
-        height: 44px;
-        line-height: 44px;
+        width: 45px;
+        height: 45px;
+        line-height: 45px;
         text-align: center;
         padding: 0 0 0 0;
         margin: 0 0 0 0;
@@ -219,35 +219,16 @@
         position: absolute;
         top: 50%;
         transform: translateY(-50%);
-        font-size: 0;
         color: #222;
         background-color: transparent;
         border-radius: 0;
         border: none !important;
         z-index: 8;
-        &::before {
-            font-family: "feather";
-            font-size: 24px;
-            line-height: 44px;
-            font-style: normal;
-            font-weight: normal;
-            font-variant: normal;
-            text-transform: none;
-            speak: none;
-            -webkit-font-smoothing: antialiased;
-            -moz-osx-font-smoothing: grayscale;
-        }
         &.slick-prev {
             left: 0;
-            &::before {
-                content: '\e929';
-            }
         }
         &.slick-next {
             right: 0;
-            &::before {
-                content: '\e92a';
-            }
         }
         &:hover {
             color: #fff;

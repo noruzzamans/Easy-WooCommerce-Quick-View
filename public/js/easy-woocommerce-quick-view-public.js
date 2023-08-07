@@ -43,14 +43,21 @@
 					// 	enableDrag: false,
 					// 	currentPagerPosition: 'left',
 					// });
+				// Check if there are gallery images
+				let hasGalleryImages = $('#easy-wqv-image-slider .easy-wqv-product-image').length > 1;
+
+				// Initialize Slick slider only if there are gallery images
+				if (hasGalleryImages) {
 					$('#easy-wqv-image-slider').slick({
-						// autoplay: true,
-						// autoplaySpeed: 2000,
+						// Other options
 						dots: true,
 						infinite: true,
 						slidesToShow: 1,
-						slidesToScroll: 1
+						slidesToScroll: 1,
+						prevArrow: '<button type="button" class="slick-prev"><i class="fas fa-chevron-left"></i></button>',
+						nextArrow: '<button type="button" class="slick-next"><i class="fas fa-chevron-right"></i></button>'
 					});
+				}
 				},
 				error: function() {
 					console.log('Error retrieving product details.');

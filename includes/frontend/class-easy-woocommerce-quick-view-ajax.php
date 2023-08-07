@@ -92,12 +92,6 @@ class Easy_WooCommerce_Quick_View_Ajax {
 		wp_die();
 	}
 	
-	
-	
-	
-	
-
-
 	/**
 	 * Check if is quick view
 	 */
