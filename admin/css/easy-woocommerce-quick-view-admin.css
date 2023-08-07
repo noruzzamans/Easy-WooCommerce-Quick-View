@@ -1,4 +1,115 @@
-/**
- * All of the CSS for your admin-specific functionality should be
- * included in this file.
- */
+.easy_woo_quick_view_framework .csf-container {
+  border: none; }
+  .easy_woo_quick_view_framework .csf-container .csf-header .csf-header-inner {
+    background-color: #f2f2f2;
+    padding: 22px 20px;
+    margin-bottom: 30px;
+    background-color: #fff;
+    border-radius: 4px;
+    -webkit-box-shadow: 0 0 20px 0 #24273214;
+    box-shadow: 0 0 20px 0 #24273214;
+    border: none; }
+    .easy_woo_quick_view_framework .csf-container .csf-header .csf-header-inner .csf-header-left {
+      width: 50%;
+      height: 100%;
+      color: #343434;
+      font-size: 20px;
+      font-weight: 600; }
+      .easy_woo_quick_view_framework .csf-container .csf-header .csf-header-inner .csf-header-left h1 {
+        margin: 0;
+        font-size: 24px;
+        color: #444;
+        font-weight: 600;
+        line-height: 35px; }
+    .easy_woo_quick_view_framework .csf-container .csf-header .csf-header-inner .csf-header-right .csf-top-save {
+      background-color: #c5c5c6;
+      border-color: transparent;
+      color: #fff;
+      -webkit-box-shadow: none;
+      box-shadow: none;
+      text-shadow: none;
+      border-radius: 4px;
+      height: 38px;
+      width: 140px;
+      -webkit-transition: background-color .2s;
+      transition: background-color .2s;
+      padding: 0; }
+    .easy_woo_quick_view_framework .csf-container .csf-header .csf-header-inner .csf-header-right .csf-reset-section {
+      background-color: #cd3c3c !important;
+      border-color: transparent !important;
+      -webkit-box-shadow: none !important;
+      box-shadow: none !important;
+      text-shadow: none !important;
+      border-radius: 4px;
+      height: 38px;
+      -webkit-transition: background-color .2s;
+      transition: background-color .2s;
+      box-shadow: 0 3px 0 #666;
+      background-color: #888;
+      color: #fff;
+      margin-left: 8px; }
+  .easy_woo_quick_view_framework .csf-container .csf-wrapper .csf-nav-inline {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border: none; }
+    .easy_woo_quick_view_framework .csf-container .csf-wrapper .csf-nav-inline ul li a {
+      font-family: "Nunito",sans-serif;
+      margin-bottom: 0;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      justify-content: center;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center;
+      font-size: 14px;
+      line-height: 1.4;
+      text-transform: uppercase;
+      text-decoration: none;
+      margin-right: 10px;
+      border-bottom: none !important;
+      background-color: #e8e8e8 !important;
+      color: #888 !important;
+      background-size: 15px;
+      background-repeat: no-repeat;
+      background-position: 20px;
+      border-top-left-radius: 4px;
+      border-top-right-radius: 4px;
+      transition: .5s;
+      border-right: none;
+      padding: 15px 40px;
+      border-top: 2px solid #bbb;
+      border-radius: 5px 5px 0 0;
+      font-weight: 700;
+      box-shadow: none !important; }
+      .easy_woo_quick_view_framework .csf-container .csf-wrapper .csf-nav-inline ul li a.csf-active {
+        border-bottom: none !important;
+        background-color: #fff !important;
+        color: #17c9a2 !important;
+        outline: 0;
+        border-color: #17c9a2;
+        box-shadow: none !important;
+        -webkit-transition: all .3s;
+        transition: all .3s; }
+      .easy_woo_quick_view_framework .csf-container .csf-wrapper .csf-nav-inline ul li a:hover {
+        outline: 0;
+        border-bottom: none !important;
+        border-color: #17c9a2 !important;
+        background-color: #fff !important;
+        box-shadow: none !important;
+        color: #17c9a2 !important;
+        -webkit-transition: all .3s;
+        transition: all .3s; }
+  .easy_woo_quick_view_framework .csf-container .csf-wrapper .csf-content .csf-sections {
+    font-family: "Nunito",sans-serif;
+    border-radius: 0 0 5px 5px;
+    background-color: #fff;
+    -webkit-box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.1);
+    box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.1); }
+    .easy_woo_quick_view_framework .csf-container .csf-wrapper .csf-content .csf-sections input {
+      border-radius: 5px; }
+
+/*# sourceMappingURL=easy-woocommerce-quick-view-admin.css.map */

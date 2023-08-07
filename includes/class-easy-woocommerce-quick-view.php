@@ -94,6 +94,7 @@ class Easy_Woocommerce_Quick_View {
 		$this->set_locale();
 		$this->define_admin_hooks();
 		$this->define_public_hooks();
+		$this->register_settings();
 
 	}
 
@@ -138,8 +139,14 @@ class Easy_Woocommerce_Quick_View {
 		 */
 		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'public/class-easy-woocommerce-quick-view-public.php';
 
+		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'libs/codestar-framework/codestar-framework.php';
+
 		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'includes/frontend/class-easy-woocommerce-quick-view-btn.php';
+
 		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'includes/frontend/class-easy-woocommerce-quick-view-ajax.php';
+
+		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'includes/backend/class-easy-woocommerce-quick-settings.php';
+
 		$this->loader = new Easy_Woocommerce_Quick_View_Loader();
 
 	}
@@ -232,6 +239,17 @@ class Easy_Woocommerce_Quick_View {
 	public function get_version() {
 		return $this->version;
 	}
+
+	/**
+     * Register plugin settings.
+     *
+     * @access   private
+     */
+    private function register_settings() {
+
+        $plugin_settings = new Easy_WooCommerce_Quick_View_Settings();
+        $plugin_settings->register_easy_woo_quick_view_options_settings();
+    }
 
 }
 
