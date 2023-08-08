@@ -55,6 +55,10 @@ class Easy_WooCommerce_Quick_View_Settings {
             'class'            => 'easy_woo_quick_view_framework',
             'menu_position'    => 59,
             'framework_title'  => __( 'Easy WooCommerce Quick View Settings', 'easy-woo-quick-view' ),
+            // footer
+            'footer_text'   => '',
+            'footer_after'  => '',
+            'footer_credit' => __( 'If you find <strong>Easy WooCommerce Quick View</strong> helpful, kindly consider leaving a <a href="https://wordpress.org/plugins/easy-woo-quick-view/#reviews" target="_blank">★★★★★</a> rating. Your review holds significant value for us, aiding in our continuous growth and improvement.', 'woo-quickview' ),
             ) );
         
             // Create a sub-tab
