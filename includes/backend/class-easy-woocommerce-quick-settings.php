@@ -49,6 +49,7 @@ class Easy_WooCommerce_Quick_View_Settings {
             'show_footer'      => false,
             'show_all_options' => false,
             'show_sub_menu'    => false,
+            'show_reset_section'=> false,
             'nav'              => 'inline',
             'theme'            => 'light',
             'class'            => 'easy_woo_quick_view_framework',
@@ -67,6 +68,11 @@ class Easy_WooCommerce_Quick_View_Settings {
                 'type'  => 'text',
                 'title' => 'Simple Text',
                 ),
+                array(
+                    'id'    => 'opt-switcher-1',
+                    'type'  => 'switcher',
+                    'title' => 'Switcher',
+                  ),                  
         
             )
             ) );
