@@ -104,4 +104,12 @@
         border-radius: 3px;
         transition: all 0.3s ease 0s; }
 
+#footer-left a.easy_woo_footer_credit, #footer-left a.easy_woo_footer_credit:hover {
+  color: #ffb900;
+  display: inline-block;
+  font-size: 1.5625rem;
+  height: auto;
+  margin: 0;
+  width: auto; }
+
 /*# sourceMappingURL=easy-woocommerce-quick-view-admin.css.map */

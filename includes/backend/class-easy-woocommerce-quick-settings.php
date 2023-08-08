@@ -58,7 +58,7 @@ class Easy_WooCommerce_Quick_View_Settings {
             // footer
             'footer_text'   => '',
             'footer_after'  => '',
-            'footer_credit' => __( 'If you find <strong>Easy WooCommerce Quick View</strong> helpful, kindly consider leaving a <a href="https://wordpress.org/plugins/easy-woo-quick-view/#reviews" target="_blank">★★★★★</a> rating. Your review holds significant value for us, aiding in our continuous growth and improvement.', 'woo-quickview' ),
+            'footer_credit' => __( 'If you find <strong>Easy WooCommerce Quick View</strong> helpful, kindly consider leaving a <a class="easy_woo_footer_credit" href="https://wordpress.org/plugins/easy-woo-quick-view/#reviews" target="_blank">★★★★★</a> rating. Your review holds significant value for us, aiding in our continuous growth and improvement.', 'woo-quickview' ),
             ) );
         
             // Create a sub-tab

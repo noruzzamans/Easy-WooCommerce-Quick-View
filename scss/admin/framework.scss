@@ -142,3 +142,19 @@
         }
     }
 }
+
+#footer-left {
+    a {
+        &.easy_woo_footer_credit {
+            color: #ffb900;
+            display: inline-block;
+            font-size: 1.5625rem;
+            height: auto;
+            margin: 0;
+            width: auto;
+            &:hover {
+                @extend .easy_woo_footer_credit;
+            }
+        }
+    }
+}
