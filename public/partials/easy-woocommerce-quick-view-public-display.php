@@ -1,16 +1,30 @@
 <?php
+require_once EASY_WOO_QUICK_VIEW_PATH . 'includes/backend/class-easy-woocommerce-quick-settings.php';
 
-/**
- * Provide a public-facing view for the plugin
- *
- * This file is used to markup the public-facing aspects of the plugin.
- *
- * @link       https://github.com/noruzzamanrubel
- * @since      1.0.0
- *
- * @package    Easy_Woocommerce_Quick_View
- * @subpackage Easy_Woocommerce_Quick_View/public/partials
- */
-?>
+class Easy_Woocommerce_Quick_View_Public_Display {
 
-<!-- This file should primarily consist of HTML with a little bit of PHP. -->
+     /**
+     * The single instance of the class.
+     */
+    protected static $instance;
+
+    /**
+     * Returns single instance of the class
+     */
+    public static function get_instance() {
+        if ( is_null( self::$instance ) ) {
+            self::$instance = new self();
+        }
+
+        return self::$instance;
+    }
+
+    public function __construct() {
+        $settings  = Easy_WooCommerce_Quick_View_Settings::get_settings();
+        $ewqv_switch                           = $settings['ewqv_switch'];
+        var_dump($ewqv_switch);
+	}
+
+}
+
+Easy_Woocommerce_Quick_View_Public_Display::get_instance();

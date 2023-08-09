@@ -147,6 +147,8 @@ class Easy_Woocommerce_Quick_View {
 
 		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'includes/backend/class-easy-woocommerce-quick-settings.php';
 
+		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'public/partials/easy-woocommerce-quick-view-public-display.php';
+
 		$this->loader = new Easy_Woocommerce_Quick_View_Loader();
 
 	}

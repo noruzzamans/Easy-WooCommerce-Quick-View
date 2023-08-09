@@ -58,42 +58,37 @@ class Easy_WooCommerce_Quick_View_Settings {
             // footer
             'footer_text'   => '',
             'footer_after'  => '',
-            'footer_credit' => __( 'If you find <strong>Easy WooCommerce Quick View</strong> helpful, kindly consider leaving a <a class="easy_woo_footer_credit" href="https://wordpress.org/plugins/easy-woo-quick-view/#reviews" target="_blank">★★★★★</a> rating. Your review holds significant value for us, aiding in our continuous growth and improvement.', 'woo-quickview' ),
+            'footer_credit' => __( 'If you find <strong>Easy WooCommerce Quick View</strong> helpful, kindly consider leaving a <a class="easy_woo_footer_credit" href="https://wordpress.org/plugins/easy-woo-quick-view/#reviews" target="_blank">★★★★★</a> rating. Your review holds significant value for us, aiding in our continuous growth and improvement.', 'easy-woo-quick-view' ),
             ) );
         
-            // Create a sub-tab
+            // General Settings
             CSF::createSection( $prefix, array(
-            'name'   => 'quick_view_btn_settings',
-            'title'  => __( 'General', 'woo-quickview' ),
-            'icon'   => 'fa fa-wrench',
+            'name'   => 'ewqv_general_settings',
+            'title'  => __( 'General Settings', 'easy-woo-quick-view' ),
             'fields' => array(
                 array(
-                'id'    => 'opt-text',
-                'type'  => 'text',
-                'title' => 'Simple Text',
-                ),
-                array(
-                    'id'    => 'opt-switcher-1',
+                    'id'    => 'ewqv_switch',
                     'type'  => 'switcher',
-                    'title' => 'Switcher',
+                    'default' => true,
+                    'output'  => '.easy_woo_quick_view_btn',
+                    'title'  => __( 'Enable Quick View', 'easy-woo-quick-view' ),
                   ),                  
         
             )
             ) );
         
-            // Create a sub-tab
+            // Modal Settings
             CSF::createSection( $prefix, array(
-            'name'   => 'popup_settings',
-            'title'  => __( 'Modal', 'woo-quickview' ),
-            'icon'   => 'fas fa-external-link-alt',
+            'name'   => 'ewqv_modal_settings',
+            'title'  => __( 'Modal Settings', 'easy-woo-quick-view' ),
             'fields' => array(
-        
-                // A textarea field
                 array(
-                'id'    => 'opt-textarea',
-                'type'  => 'textarea',
-                'title' => 'Simple Textarea',
-                ),
+                    'id'          => 'ewqv_bg_color',
+                    'type'        => 'color',
+                    'title' => __( 'Background Color', 'easy-woo-quick-view' ),
+                    'output_mode' => 'background-color',
+                    'default' => '#ffffff'
+                  ),
         
             )
             ) );
