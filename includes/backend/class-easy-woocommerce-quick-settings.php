@@ -72,7 +72,22 @@ class Easy_WooCommerce_Quick_View_Settings {
                     'default' => true,
                     'output'  => '.easy_woo_quick_view_btn',
                     'title'  => __( 'Enable Quick View', 'easy-woo-quick-view' ),
-                  ),                  
+                  ), 
+                array(
+                    'id'       => 'ewqv_btn_position',
+                    'type'     => 'select',
+                    'title'    => __( 'Button Position', 'easy-woo-quick-view' ),
+                    'subtitle' => __( 'Choose the placement of the quick view button.', 'easy-woo-quick-view' ),
+                    'options'  => array(
+                        'before_title'        => __( 'Before Title', 'easy-woo-quick-view' ),
+                        'after_title'        => __( 'After Title', 'easy-woo-quick-view' ),
+                        'after_rating'        => __( 'After Rating', 'easy-woo-quick-view' ),
+                        'after_price'        => __( 'After Price', 'easy-woo-quick-view' ),
+                        'before_add_to_cart'        => __( 'Before Add to Cart button', 'easy-woo-quick-view' ),
+                        'after_add_to_cart'         => __( 'After Add to Cart button', 'easy-woo-quick-view' ),
+                    ),
+                    'default'  => 'after_add_to_cart',
+                ),                                   
         
             )
             ) );

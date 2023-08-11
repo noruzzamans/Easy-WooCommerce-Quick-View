@@ -20,9 +20,7 @@ class Easy_Woocommerce_Quick_View_Public_Display {
     }
 
     public function __construct() {
-        $settings  = Easy_WooCommerce_Quick_View_Settings::get_settings();
-        $ewqv_switch                           = $settings['ewqv_switch'];
-        var_dump($ewqv_switch);
+
 	}
 
 }

@@ -1,5 +1,7 @@
 <?php
 
+require_once EASY_WOO_QUICK_VIEW_PATH . 'includes/backend/class-easy-woocommerce-quick-settings.php';
+
 if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
@@ -24,12 +26,32 @@ class Easy_WooCommerce_Quick_View_Btn {
 
     public function __construct() {
 
-        add_action( 'woocommerce_after_shop_loop_item', [ $this, 'add_easy_woo_quick_view_button' ], 11 );
+        $settings = Easy_WooCommerce_Quick_View_Settings::get_settings();
+        $ewqv_position = isset($settings['ewqv_btn_position']) ? $settings['ewqv_btn_position'] : '';
+        
+        if ( ! empty( $ewqv_position ) ) {
+            switch ($ewqv_position) {
+                case 'before_add_to_cart':
+                    add_action( 'woocommerce_after_shop_loop_item', [ $this, 'add_easy_woo_quick_view_button' ], 9 );
+                    break;
+                case 'after_add_to_cart':
+                    add_action( 'woocommerce_after_shop_loop_item', [ $this, 'add_easy_woo_quick_view_button' ], 11 );
+                    break;
+                default:
+                    add_action( 'woocommerce_after_shop_loop_item', [ $this, 'add_easy_woo_quick_view_button' ], 11 );
+                    break;
+            }
+        }   
 
 	}
 
     public function add_easy_woo_quick_view_button(){
-        echo  $this->add_easy_woo_quick_view_buton_html();
+        $settings  = Easy_WooCommerce_Quick_View_Settings::get_settings();
+        $ewqv_switch = isset( $settings['ewqv_switch'] ) ? $settings['ewqv_switch'] : false;
+        if($ewqv_switch){
+            echo  $this->add_easy_woo_quick_view_buton_html();
+        }
+
     }
 
     public function add_easy_woo_quick_view_buton_html() {
