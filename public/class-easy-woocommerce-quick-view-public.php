@@ -82,7 +82,14 @@ class Easy_Woocommerce_Quick_View_Public {
 			'ajax_url' => admin_url('admin-ajax.php'),
 			'nonce'    => wp_create_nonce( 'easy_woocommerce_quick_view_nonce' ),
 		));
-
+		
+		$settings = Easy_WooCommerce_Quick_View_Settings::get_settings();
+		$ewqv_position = $settings['ewqv_btn_position'];
+		if($ewqv_position){
+			wp_localize_script($this->plugin_name, 'ewqv_btn', array(
+				'ewqv_btn_position'    => $ewqv_position,
+			));
+		}
 	}
 
 }

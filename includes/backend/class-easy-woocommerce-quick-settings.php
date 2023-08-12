@@ -79,7 +79,8 @@ class Easy_WooCommerce_Quick_View_Settings {
                     'title'    => __( 'Button Position', 'easy-woo-quick-view' ),
                     'subtitle' => __( 'Choose the placement of the quick view button.', 'easy-woo-quick-view' ),
                     'options'  => array(
-                        'before_title'        => __( 'Before Title', 'easy-woo-quick-view' ),
+                        'over_product_image'        => __( 'Over Product Image', 'easy-woo-quick-view' ),
+                        'over_product_image_hover'        => __( 'Over Product Image Hover', 'easy-woo-quick-view' ),
                         'after_title'        => __( 'After Title', 'easy-woo-quick-view' ),
                         'after_rating'        => __( 'After Rating', 'easy-woo-quick-view' ),
                         'after_price'        => __( 'After Price', 'easy-woo-quick-view' ),
