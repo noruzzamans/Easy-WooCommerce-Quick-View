@@ -70,9 +70,11 @@ class Easy_WooCommerce_Quick_View_Btn {
     }
 
     public function add_easy_woo_quick_view_buton_html() {
+        $settings  = Easy_WooCommerce_Quick_View_Settings::get_settings();
+        $ewqv_btn_label = $settings['ewqv_btn_label'];
 
         global $product;
-        $label = 'Quick View';
+        $label = $ewqv_btn_label;
         $product_id = $product->get_id();
         
         return '<a href="#" id="easy_woo_quick_view_btn" class="easy_woo_quick_view_btn button" data-product-id="'. $product_id .'">'. $label .'</a>';

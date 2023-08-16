@@ -1,5 +1,7 @@
 <?php
 
+require_once EASY_WOO_QUICK_VIEW_PATH . 'includes/backend/class-easy-woocommerce-quick-settings.php';
+
 /**
  * The public-facing functionality of the plugin.
  *
@@ -60,6 +62,26 @@ class Easy_Woocommerce_Quick_View_Public {
 	 * @since    1.0.0
 	 */
 	public function enqueue_styles() {
+		$settings  = Easy_WooCommerce_Quick_View_Settings::get_settings();
+        $ewqv_btn_border_radius_top        = $settings['ewqv_btn_border_radius_top'];
+        $ewqv_btn_border_radius_right      = $settings['ewqv_btn_border_radius_right'];
+        $ewqv_btn_border_radius_bottom     = $settings['ewqv_btn_border_radius_bottom'];
+        $ewqv_btn_border_radius_left       = $settings['ewqv_btn_border_radius_left'];
+
+        ?>
+        <style>
+            a.easy_woo_quick_view_btn {
+                transition: ease-in-out .5s !important;
+            }
+            a.easy_woo_quick_view_btn {
+                border-top-left-radius:     <?php echo esc_html($ewqv_btn_border_radius_top); ?>px!important;
+                border-top-right-radius:    <?php echo esc_html($ewqv_btn_border_radius_right); ?>px!important;
+                border-bottom-right-radius: <?php echo esc_html($ewqv_btn_border_radius_bottom); ?>px!important;
+                border-bottom-left-radius:  <?php echo esc_html($ewqv_btn_border_radius_left); ?>px!important;
+            }
+        </style>
+        <?php
+
 		wp_enqueue_style( $this->plugin_name. '-font-awesome', 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css', array(), $this->version, 'all' );
 		wp_enqueue_style( $this->plugin_name. '-slick', plugin_dir_url( __FILE__ ) . 'css/slick.min.css', array(), $this->version, 'all' );
 		wp_enqueue_style( $this->plugin_name.'-magnific', plugin_dir_url( __FILE__ ) . 'css/easy-woocommerce-quick-view-public-magnific.css', array(), $this->version, 'all' );

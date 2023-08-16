@@ -85,15 +85,19 @@
                 .csf-sections {
                     background-color: #fff;
                     box-shadow: 0 1px 4px rgba(0, 0, 0, .07);
-                    input {
-                        background-color: #f2f2f2;
-                        box-shadow: none;
-                        border: 1px solid rgba(0,0,0, .05);
-                        transition: border linear 0.2s, box-shadow linear 0.2s;
-                        &:focus {
-                            border-color: #73d16f !important;
-                        }
-                    }
+                    // .csf--label {
+                    //     background-color: #f2f2f2;
+                    //     box-shadow: none;
+                    //     border: 1px solid rgba(0,0,0, .05);
+                    //     border-right: 0;
+                    //     transition: border linear 0.2s, box-shadow linear 0.2s;
+                    // }
+                    // input {
+                    //     background-color: #f2f2f2;
+                    //     box-shadow: none;
+                    //     border: 1px solid rgba(0,0,0, .05);
+                    //     transition: border linear 0.2s, box-shadow linear 0.2s;
+                    // }
                     textarea {
                         background-color: #f2f2f2;
                         box-shadow: none;

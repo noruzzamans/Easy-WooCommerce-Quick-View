@@ -64,7 +64,7 @@ class Easy_WooCommerce_Quick_View_Settings {
             // General Settings
             CSF::createSection( $prefix, array(
             'name'   => 'ewqv_general_settings',
-            'title'  => __( 'General Settings', 'easy-woo-quick-view' ),
+            'title'  => __( 'Button Settings', 'easy-woo-quick-view' ),
             'fields' => array(
                 array(
                     'id'    => 'ewqv_switch',
@@ -76,7 +76,7 @@ class Easy_WooCommerce_Quick_View_Settings {
                 array(
                     'id'       => 'ewqv_btn_position',
                     'type'     => 'select',
-                    'title'    => __( 'Button Position', 'easy-woo-quick-view' ),
+                    'title'    => __( 'Position', 'easy-woo-quick-view' ),
                     'subtitle' => __( 'Choose the placement of the quick view button.', 'easy-woo-quick-view' ),
                     'options'  => array(
                         'over_product_image'        => __( 'Over Product Image', 'easy-woo-quick-view' ),
@@ -88,8 +88,149 @@ class Easy_WooCommerce_Quick_View_Settings {
                         'after_add_to_cart'         => __( 'After Add to Cart button', 'easy-woo-quick-view' ),
                     ),
                     'default'  => 'after_add_to_cart',
-                ),                                   
-        
+                ),
+                array(
+                    'id'      => 'ewqv_btn_label',
+                    'type'    => 'text',
+                    'title'   => __( 'Text', 'easy-woo-quick-view' ),
+                    'default' => __( 'Quick View', 'easy-woo-quick-view' ),
+                ),
+                array(
+                    'id'               => 'ewqv_btn_font_family',
+                    'title'            => __( 'Typography', 'easy-woo-quick-view' ),
+                    'type'             => 'typography',
+                    'output'           => 'a.easy_woo_quick_view_btn',
+                    'output_important' => true,
+                    'font_family'      => true,
+                    'font_weight'      => true,
+                    'subset'           => true,
+                    'font_style'       => true,
+                    'font_size'        => true,
+                    'line_height'      => true,
+                    'letter_spacing'   => true,
+                    'text_align'       => true,
+                    'text_transform'   => true,
+                    'color'            => false,
+                    'default'          => array(
+                        'font-family' => '',
+                        'font-size'   => '16',
+                        'font-weight' => '500',
+                        'unit'        => 'px',
+                        'type'        => 'google',
+                    ),
+                ),
+                array(
+                    'id'      => 'ewqv_btn_bg_color',
+                    'type'        => 'color',
+                    'title' => __( 'Background Color', 'easy-woo-quick-view' ),
+                    'output_mode' => 'background-color',
+                    'output_important' => true,
+                    'output' => 'a.easy_woo_quick_view_btn',
+                    'default' => '#eb7a61'
+                ),
+                array(
+                    'id'      => 'ewqv_btn_bg_hover_color',
+                    'type'        => 'color',
+                    'title' => __( 'Background Hover Color', 'easy-woo-quick-view' ),
+                    'output_mode' => 'background-color',
+                    'output_important' => true,
+                    'output' => 'a.easy_woo_quick_view_btn:hover',
+                    'default' => '#15c7a4'
+                ),
+                array(
+                    'id'      => 'ewqv_btn_color',
+                    'type'        => 'color',
+                    'title' => __( 'Text Color', 'easy-woo-quick-view' ),
+                    'output_important' => true,
+                    'output' => 'a.easy_woo_quick_view_btn',
+                    'default' => '#ffffff'
+                ),
+                array(
+                    'id'      => 'ewqv_btn_hover_color',
+                    'type'        => 'color',
+                    'title' => __( 'Text Hover Color', 'easy-woo-quick-view' ),
+                    'output_important' => true,
+                    'output' => 'a.easy_woo_quick_view_btn:hover',
+                    'default' => '#ffffff'
+                ),
+                array(
+                    'id'               => 'ewqv_btn_padding',
+                    'type'             => 'spacing',
+                    'title'            => __( 'Padding', 'easy-woo-quick-view' ),
+                    'output'           => 'a.easy_woo_quick_view_btn',
+                    'output_mode'      => 'padding',
+                    'output_important' => true,
+                    'default'          => array(
+                        'top'    => '10',
+                        'right'  => '16',
+                        'bottom' => '10',
+                        'left'   => '16',
+                        'unit'   => 'px',
+                    ),
+                ),
+                array(
+                    'id'               => 'ewqv_btn_margin',
+                    'type'             => 'spacing',
+                    'title'            => __( 'Margin', 'easy-woo-quick-view' ),
+                    'output'           => 'a.easy_woo_quick_view_btn',
+                    'output_mode'      => 'margin',
+                    'output_important' => true,
+                    'default'          => array(
+                        'top'    => '16',
+                        'right'  => '0',
+                        'bottom' => '0',
+                        'left'   => '0',
+                        'unit'   => 'px',
+                    ),
+                ),
+                array(
+                    'id'               => 'ewqv_btn_border',
+                    'type'             => 'border',
+                    'title'            => __( 'Border', 'easy-woo-quick-view' ),
+                    'output'           => 'a.easy_woo_quick_view_btn',
+                    'output_important' => true,
+                    'default'          => array(
+                        'style'  => 'solid',
+                        'color'  => '#ffffff',
+                        'top'    => '0',
+                        'right'  => '0',
+                        'bottom' => '0',
+                        'left'   => '0',
+                        'unit'   => 'px',
+                    ),
+                ),
+                array(
+                    'type'    => 'heading',
+                    'content' => __( 'Border radius', 'easy-woo-quick-view' ),
+                ),
+                array(
+                    'id'      => 'ewqv_btn_border_radius_top',
+                    'type'    => 'number',
+                    'unit'    => 'px',
+                    'default' => '0',
+                    'title'   => __( 'Top', 'easy-woo-quick-view' ),
+                ),
+                array(
+                    'id'      => 'ewqv_btn_border_radius_right',
+                    'type'    => 'number',
+                    'unit'    => 'px',
+                    'default' => '0',
+                    'title'   => __( 'Right', 'easy-woo-quick-view' ),
+                ),
+                array(
+                    'id'      => 'ewqv_btn_border_radius_bottom',
+                    'type'    => 'number',
+                    'unit'    => 'px',
+                    'default' => '0',
+                    'title'   => __( 'Bottom', 'easy-woo-quick-view' ),
+                ),
+                array(
+                    'id'      => 'ewqv_btn_border_radius_left',
+                    'type'    => 'number',
+                    'unit'    => 'px',
+                    'default' => '0',
+                    'title'   => __( 'Left', 'easy-woo-quick-view' ),
+                ),                            
             )
             ) );
         
@@ -99,13 +240,42 @@ class Easy_WooCommerce_Quick_View_Settings {
             'title'  => __( 'Modal Settings', 'easy-woo-quick-view' ),
             'fields' => array(
                 array(
-                    'id'          => 'ewqv_bg_color',
+                    'id'       => 'ewqv_modal_width_height',
+                    'type'     => 'dimensions',
+                    'title'    => __( 'Modal Size', 'easy-woo-quick-view' ),
+                    'subtitle'    => __( 'For best results, use 2:1 width-to-height ratio.', 'easy-woo-quick-view' ),
+                    'output' => '.easy-wqv-product-modal',
+                    'output_important' => true,
+                    'default'  => array(
+                      'width'  => '900',
+                      'height' => '450',
+                      'unit'   => 'px',
+                    ),
+                ),
+                array(
+                    'id'      => 'ewqv_modal_bg_color',
                     'type'        => 'color',
                     'title' => __( 'Background Color', 'easy-woo-quick-view' ),
-                    'output_mode' => 'background-color',
+                    'output_mode' => 'background',
+                    'output_important' => true,
+                    'output' => '.easy-wqv-product-modal',
                     'default' => '#ffffff'
-                  ),
-        
+                ),
+                array(
+                    'id'               => 'ewqv_modal_content_padding',
+                    'type'             => 'spacing',
+                    'title'            => __( 'Content Wrapper Padding', 'easy-woo-quick-view' ),
+                    'output'           => '.easy-wqv-summary-wrapper',
+                    'output_mode'      => 'padding',
+                    'output_important' => true,
+                    'default'          => array(
+                        'top'    => '20',
+                        'right'  => '20',
+                        'bottom' => '20',
+                        'left'   => '20',
+                        'unit'   => 'px',
+                    ),
+                ),              
             )
             ) );
   
