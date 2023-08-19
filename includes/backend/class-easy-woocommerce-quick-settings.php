@@ -240,35 +240,50 @@ class Easy_WooCommerce_Quick_View_Settings {
             'title'  => __( 'Modal Settings', 'easy-woo-quick-view' ),
             'fields' => array(
                 array(
-                    'id'       => 'ewqv_modal_width_height',
-                    'type'     => 'dimensions',
-                    'title'    => __( 'Modal Size', 'easy-woo-quick-view' ),
-                    'subtitle'    => __( 'For best results, use 2:1 width-to-height ratio.', 'easy-woo-quick-view' ),
-                    'output' => '.easy-wqv-product-modal',
-                    'output_important' => true,
-                    'default'  => array(
-                      'width'  => '900',
-                      'height' => '450',
-                      'unit'   => 'px',
+                    'id'                => 'ewqv_modal_bg_overlay',
+                    'type'              => 'color',
+                    'title'             => __( 'Background Overlay Color', 'easy-woo-quick-view' ),
+                    'output_mode'       => 'background',
+                    'output_important'  => true,
+                    'output'            => '.mfp-bg.mfp-ewqv',
+                    'default'           => '#0b0b0b'
+                ),
+                array(
+                    'id'                => 'ewqv_modal_z_index',
+                    'type'              => 'number',
+                    'title'             => __( 'Modal Z-Index', 'easy-woo-quick-view' ),
+                    'default'           => 999999
+                ),
+                array(
+                    'id'                => 'ewqv_modal_width_height',
+                    'type'              => 'dimensions',
+                    'title'             => __( 'Modal Size', 'easy-woo-quick-view' ),
+                    'subtitle'          => __( 'For best results, use 2:1 width-to-height ratio.', 'easy-woo-quick-view' ),
+                    'output'            => '.easy-wqv-product-modal',
+                    'output_important'  => true,
+                    'default'           => array(
+                      'width'           => '900',
+                      'height'          => '450',
+                      'unit'            => 'px',
                     ),
                 ),
                 array(
-                    'id'      => 'ewqv_modal_bg_color',
-                    'type'        => 'color',
-                    'title' => __( 'Background Color', 'easy-woo-quick-view' ),
-                    'output_mode' => 'background',
-                    'output_important' => true,
-                    'output' => '.easy-wqv-product-modal',
-                    'default' => '#ffffff'
+                    'id'                => 'ewqv_modal_bg_color',
+                    'type'              => 'color',
+                    'title'             => __( 'Background Color', 'easy-woo-quick-view' ),
+                    'output_mode'       => 'background',
+                    'output_important'  => true,
+                    'output'            => '.easy-wqv-product-modal',
+                    'default'           => '#ffffff'
                 ),
                 array(
-                    'id'               => 'ewqv_modal_content_padding',
-                    'type'             => 'spacing',
-                    'title'            => __( 'Content Wrapper Padding', 'easy-woo-quick-view' ),
-                    'output'           => '.easy-wqv-summary-wrapper',
-                    'output_mode'      => 'padding',
-                    'output_important' => true,
-                    'default'          => array(
+                    'id'                => 'ewqv_modal_content_padding',
+                    'type'              => 'spacing',
+                    'title'             => __( 'Content Wrapper Padding', 'easy-woo-quick-view' ),
+                    'output'            => '.easy-wqv-summary-wrapper',
+                    'output_mode'       => 'padding',
+                    'output_important'  => true,
+                    'default'           => array(
                         'top'    => '20',
                         'right'  => '20',
                         'bottom' => '20',

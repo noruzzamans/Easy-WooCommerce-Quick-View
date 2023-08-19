@@ -62,11 +62,13 @@ class Easy_Woocommerce_Quick_View_Public {
 	 * @since    1.0.0
 	 */
 	public function enqueue_styles() {
-		$settings  = Easy_WooCommerce_Quick_View_Settings::get_settings();
-        $ewqv_btn_border_radius_top        = $settings['ewqv_btn_border_radius_top'];
-        $ewqv_btn_border_radius_right      = $settings['ewqv_btn_border_radius_right'];
-        $ewqv_btn_border_radius_bottom     = $settings['ewqv_btn_border_radius_bottom'];
-        $ewqv_btn_border_radius_left       = $settings['ewqv_btn_border_radius_left'];
+		$settings  							= Easy_WooCommerce_Quick_View_Settings::get_settings();
+        $ewqv_btn_border_radius_top        	= $settings['ewqv_btn_border_radius_top'];
+        $ewqv_btn_border_radius_right      	= $settings['ewqv_btn_border_radius_right'];
+        $ewqv_btn_border_radius_bottom     	= $settings['ewqv_btn_border_radius_bottom'];
+        $ewqv_btn_border_radius_left       	= $settings['ewqv_btn_border_radius_left'];
+
+		$ewqv_modal_z_index					= $settings['ewqv_modal_z_index'];
 
         ?>
         <style>
@@ -78,6 +80,11 @@ class Easy_Woocommerce_Quick_View_Public {
                 border-top-right-radius:    <?php echo esc_html($ewqv_btn_border_radius_right); ?>px!important;
                 border-bottom-right-radius: <?php echo esc_html($ewqv_btn_border_radius_bottom); ?>px!important;
                 border-bottom-left-radius:  <?php echo esc_html($ewqv_btn_border_radius_left); ?>px!important;
+            }
+			.mfp-bg.mfp-ewqv {
+				<?php if(array_key_exists('ewqv_modal_z_index', $settings)): ?>
+				z-index: <?php echo esc_html($settings['ewqv_modal_z_index']);?>!important;
+				<?php endif; ?>
             }
         </style>
         <?php
