@@ -69,6 +69,7 @@ class Easy_Woocommerce_Quick_View_Public {
         $ewqv_btn_border_radius_left       	= $settings['ewqv_btn_border_radius_left'];
 
 		$ewqv_modal_z_index					= $settings['ewqv_modal_z_index'];
+		$ewqv_close_btn_switch					= $settings['ewqv_close_btn_switch'];
 
         ?>
         <style>
@@ -86,6 +87,11 @@ class Easy_Woocommerce_Quick_View_Public {
 				z-index: <?php echo esc_html($settings['ewqv_modal_z_index']);?>!important;
 				<?php endif; ?>
             }
+			.easy-wqv-product-modal .mfp-close {
+				<?php if($ewqv_close_btn_switch == '0') : ?>
+					display: none;
+				<?php endif; ?>	
+			}
         </style>
         <?php
 

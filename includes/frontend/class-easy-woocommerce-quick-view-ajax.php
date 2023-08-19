@@ -1,4 +1,7 @@
 <?php
+
+require_once EASY_WOO_QUICK_VIEW_PATH . 'includes/backend/class-easy-woocommerce-quick-settings.php';
+
 if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
@@ -26,12 +29,36 @@ class Easy_WooCommerce_Quick_View_Ajax {
 		add_action( 'wp_ajax_easy_woocommerce_quick_view', [$this, 'easy_woocommerce_quick_view'] );
         add_action( 'wp_ajax_nopriv_easy_woocommerce_quick_view', [$this, 'easy_woocommerce_quick_view'] );
 
-		add_action( 'easy_wqv_product_summary', 'woocommerce_template_single_title', 5 );
-		add_action( 'easy_wqv_product_summary', 'woocommerce_template_single_rating', 10 );
-		add_action( 'easy_wqv_product_summary', 'woocommerce_template_single_price', 15 );
-		add_action( 'easy_wqv_product_summary', 'woocommerce_template_single_excerpt', 20 );
-		add_action( 'easy_wqv_product_summary', 'woocommerce_template_single_add_to_cart', 25 );
-		add_action( 'easy_wqv_product_summary', 'woocommerce_template_single_meta', 30 );
+		$settings 		= Easy_WooCommerce_Quick_View_Settings::get_settings();
+		$title 			= isset($settings['ewqv_title_switch']) ? $settings['ewqv_title_switch'] : '';
+		$rating 		= isset($settings['ewqv_rating_switch']) ? $settings['ewqv_rating_switch'] : '';
+		$price 			= isset($settings['ewqv_Price_switch']) ? $settings['ewqv_Price_switch'] : '';
+		$excerpt 		= isset($settings['ewqv_excerpt_switch']) ? $settings['ewqv_excerpt_switch'] : '';
+		$add_to_cart 	= isset($settings['ewqv_add_to_cart_switch']) ? $settings['ewqv_add_to_cart_switch'] : '';
+		$meta 			= isset($settings['ewqv_meta_switch']) ? $settings['ewqv_meta_switch'] : '';
+		$social_share			= isset($settings['ewqv_social_switch']) ? $settings['ewqv_social_switch'] : '';
+
+		if($title){
+			add_action( 'easy_wqv_product_summary', 'woocommerce_template_single_title', 5 );
+		}
+		if($rating){
+			add_action( 'easy_wqv_product_summary', 'woocommerce_template_single_rating', 10 );
+		}
+		if($price){
+			add_action( 'easy_wqv_product_summary', 'woocommerce_template_single_price', 15 );
+		}
+		if($excerpt){
+			add_action( 'easy_wqv_product_summary', 'woocommerce_template_single_excerpt', 20 );
+		}
+		if($add_to_cart){
+			add_action( 'easy_wqv_product_summary', 'woocommerce_template_single_add_to_cart', 25 );
+		}
+		if($meta){
+			add_action( 'easy_wqv_product_summary', 'woocommerce_template_single_meta', 30 );
+		}
+		if($social_share){
+			add_action( 'easy_wqv_product_summary', 'woocommerce_template_single_sharing', 50 );
+		}
 
 		add_filter( 'woocommerce_add_to_cart_form_action', array( $this, 'easy_woocommerce_quick_view_avoid_redirecting_to_single_page' ), 10, 1 );
 	}

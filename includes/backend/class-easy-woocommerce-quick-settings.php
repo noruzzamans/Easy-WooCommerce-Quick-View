@@ -72,7 +72,7 @@ class Easy_WooCommerce_Quick_View_Settings {
                     'default' => true,
                     'output'  => '.easy_woo_quick_view_btn',
                     'title'  => __( 'Enable Quick View', 'easy-woo-quick-view' ),
-                  ), 
+                ), 
                 array(
                     'id'       => 'ewqv_btn_position',
                     'type'     => 'select',
@@ -200,7 +200,7 @@ class Easy_WooCommerce_Quick_View_Settings {
                     ),
                 ),
                 array(
-                    'type'    => 'heading',
+                    'type'    => 'subheading',
                     'content' => __( 'Border radius', 'easy-woo-quick-view' ),
                 ),
                 array(
@@ -240,19 +240,8 @@ class Easy_WooCommerce_Quick_View_Settings {
             'title'  => __( 'Modal Settings', 'easy-woo-quick-view' ),
             'fields' => array(
                 array(
-                    'id'                => 'ewqv_modal_bg_overlay',
-                    'type'              => 'color',
-                    'title'             => __( 'Background Overlay Color', 'easy-woo-quick-view' ),
-                    'output_mode'       => 'background',
-                    'output_important'  => true,
-                    'output'            => '.mfp-bg.mfp-ewqv',
-                    'default'           => '#0b0b0b'
-                ),
-                array(
-                    'id'                => 'ewqv_modal_z_index',
-                    'type'              => 'number',
-                    'title'             => __( 'Modal Z-Index', 'easy-woo-quick-view' ),
-                    'default'           => 999999
+                    'type'    => 'subheading',
+                    'content' => __( 'Global Setting', 'easy-woo-quick-view' ),
                 ),
                 array(
                     'id'                => 'ewqv_modal_width_height',
@@ -268,6 +257,12 @@ class Easy_WooCommerce_Quick_View_Settings {
                     ),
                 ),
                 array(
+                    'id'                => 'ewqv_modal_z_index',
+                    'type'              => 'number',
+                    'title'             => __( 'Modal Z-Index', 'easy-woo-quick-view' ),
+                    'default'           => 999999
+                ),
+                array(
                     'id'                => 'ewqv_modal_bg_color',
                     'type'              => 'color',
                     'title'             => __( 'Background Color', 'easy-woo-quick-view' ),
@@ -275,6 +270,59 @@ class Easy_WooCommerce_Quick_View_Settings {
                     'output_important'  => true,
                     'output'            => '.easy-wqv-product-modal',
                     'default'           => '#ffffff'
+                ),
+                array(
+                    'id'                => 'ewqv_modal_bg_overlay',
+                    'type'              => 'color',
+                    'title'             => __( 'Background Overlay Color', 'easy-woo-quick-view' ),
+                    'output_mode'       => 'background',
+                    'output_important'  => true,
+                    'output'            => '.mfp-bg.mfp-ewqv',
+                    'default'           => '#0b0b0b'
+                ),
+                array(
+                    'type'              => 'subheading',
+                    'content'           => __( 'Close Button Setting', 'easy-woo-quick-view' ),
+                ),
+                array(
+                    'id'                => 'ewqv_close_btn_switch',
+                    'type'              => 'switcher',
+                    'default'           => true,
+                    'title'             => __( 'Button Show/Hide', 'easy-woo-quick-view' ),
+                ),
+                array(
+                    'id'                => 'ewqv_close_btn_switch_bg',
+                    'type'              => 'color',
+                    'title'             => __( 'Button Background Color', 'easy-woo-quick-view' ),
+                    'output_mode'       => 'background',
+                    'output_important'  => true,
+                    'output'            => '.easy-wqv-product-modal .mfp-close',
+                    'default'           => 'transparent'
+                ),
+                array(
+                    'id'                => 'ewqv_close_btn_switch_bg_hover',
+                    'type'              => 'color',
+                    'title'             => __( 'Button Background Hover Color', 'easy-woo-quick-view' ),
+                    'output_mode'       => 'background',
+                    'output_important'  => true,
+                    'output'            => '.easy-wqv-product-modal .mfp-close:hover',
+                    'default'           => '#eb7a61'
+                ),
+                array(
+                    'id'                => 'ewqv_close_btn_switch_color',
+                    'type'              => 'color',
+                    'title'             => __( 'Button Icon Color', 'easy-woo-quick-view' ),
+                    'output_important'  => true,
+                    'output'            => '.easy-wqv-product-modal .mfp-close',
+                    'default'           => '#333'
+                ),
+                array(
+                    'id'                => 'ewqv_close_btn_switch_hover_color',
+                    'type'              => 'color',
+                    'title'             => __( 'Button Icon Hover Color', 'easy-woo-quick-view' ),
+                    'output_important'  => true,
+                    'output'            => '.easy-wqv-product-modal .mfp-close:hover',
+                    'default'           => '#fff'
                 ),
                 array(
                     'id'                => 'ewqv_modal_content_padding',
@@ -292,6 +340,83 @@ class Easy_WooCommerce_Quick_View_Settings {
                     ),
                 ),              
             )
+            ) );
+
+            // Thumbnails Settings
+            CSF::createSection( $prefix, array(
+                'name'   => 'ewqv_thumbnails_settings',
+                'title'  => __( 'Thumbnails Settings', 'easy-woo-quick-view' ),
+                'fields' => array(
+             
+                )
+            ) );
+            // Content Settings
+            CSF::createSection( $prefix, array(
+                'name'   => 'ewqv_content_settings',
+                'title'  => __( 'Content Settings', 'easy-woo-quick-view' ),
+                'fields' => array(
+                    array(
+                        'id'                => 'ewqv_modal_content_padding',
+                        'type'              => 'spacing',
+                        'title'             => __( 'Content Wrapper Padding', 'easy-woo-quick-view' ),
+                        'output'            => '.easy-wqv-summary-wrapper',
+                        'output_mode'       => 'padding',
+                        'output_important'  => true,
+                        'default'           => array(
+                            'top'    => '20',
+                            'right'  => '20',
+                            'bottom' => '20',
+                            'left'   => '20',
+                            'unit'   => 'px',
+                        ),
+                    ),
+                    array(
+                        'type'              => 'subheading',
+                        'content'           => __( 'Product Info Show/Hide Options', 'easy-woo-quick-view' ),
+                    ),
+                    array(
+                        'id'                => 'ewqv_title_switch',
+                        'type'              => 'switcher',
+                        'default'           => true,
+                        'title'             => __( 'Title', 'easy-woo-quick-view' ),
+                    ),
+                    array(
+                        'id'                => 'ewqv_rating_switch',
+                        'type'              => 'switcher',
+                        'default'           => true,
+                        'title'             => __( 'Rating', 'easy-woo-quick-view' ),
+                    ),
+                    array(
+                        'id'                => 'ewqv_Price_switch',
+                        'type'              => 'switcher',
+                        'default'           => true,
+                        'title'             => __( 'Price', 'easy-woo-quick-view' ),
+                    ),
+                    array(
+                        'id'                => 'ewqv_excerpt_switch',
+                        'type'              => 'switcher',
+                        'default'           => true,
+                        'title'             => __( 'Excerpt', 'easy-woo-quick-view' ),
+                    ),
+                    array(
+                        'id'                => 'ewqv_add_to_cart_switch',
+                        'type'              => 'switcher',
+                        'default'           => true,
+                        'title'             => __( 'Add To Cart', 'easy-woo-quick-view' ),
+                    ), 
+                    array(
+                        'id'                => 'ewqv_meta_switch',
+                        'type'              => 'switcher',
+                        'default'           => true,
+                        'title'             => __( 'Meta', 'easy-woo-quick-view' ),
+                    ),
+                    array(
+                        'id'                => 'ewqv_social_switch',
+                        'type'              => 'switcher',
+                        'default'           => true,
+                        'title'             => __( 'Social Share', 'easy-woo-quick-view' ),
+                    ),        
+                )
             ) );
   
     }
