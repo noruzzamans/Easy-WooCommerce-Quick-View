@@ -325,20 +325,16 @@ class Easy_WooCommerce_Quick_View_Settings {
                     'default'           => '#fff'
                 ),
                 array(
-                    'id'                => 'ewqv_modal_content_padding',
-                    'type'              => 'spacing',
-                    'title'             => __( 'Content Wrapper Padding', 'easy-woo-quick-view' ),
-                    'output'            => '.easy-wqv-summary-wrapper',
-                    'output_mode'       => 'padding',
-                    'output_important'  => true,
-                    'default'           => array(
-                        'top'    => '20',
-                        'right'  => '20',
-                        'bottom' => '20',
-                        'left'   => '20',
-                        'unit'   => 'px',
-                    ),
-                ),              
+                    'type'              => 'subheading',
+                    'content'           => __( 'Scrollbar Setting', 'easy-woo-quick-view' ),
+                ),
+                array(
+                    'id'                => 'ewqv_scrollbar_bg',
+                    'type'              => 'color',
+                    'title'             => __( 'Scrollbar Background', 'easy-woo-quick-view' ),
+                    'output_mode'       => 'background',
+                    'default'           => '#333333'
+                ),     
             )
             ) );
 
@@ -415,7 +411,231 @@ class Easy_WooCommerce_Quick_View_Settings {
                         'type'              => 'switcher',
                         'default'           => true,
                         'title'             => __( 'Social Share', 'easy-woo-quick-view' ),
-                    ),        
+                    ),
+                    array(
+                        'type'              => 'subheading',
+                        'content'           => __( 'Title', 'easy-woo-quick-view' ),
+                    ),
+                    array(
+                        'id'                => 'ewqv_content_title_color',
+                        'type'              => 'color',
+                        'title'             => __( 'Color', 'easy-woo-quick-view' ),
+                        'output_important'  => true,
+                        'output'            => '.easy-wqv-summary-content .product_title',
+                        'default'           => '#222'
+                    ),
+                    array(
+                        'type'              => 'subheading',
+                        'content'           => __( 'Review and Rating', 'easy-woo-quick-view' ),
+                    ),
+                    array(
+                        'id'                => 'ewqv_review_link_switch',
+                        'type'              => 'switcher',
+                        'default'           => true,
+                        'title'             => __( 'Review Link', 'easy-woo-quick-view' ),
+                    ),
+                    array(
+                        'id'                => 'ewqv_content_review_color',
+                        'type'              => 'color',
+                        'title'             => __( 'Review Color', 'easy-woo-quick-view' ),
+                        'output_important'  => true,
+                        'output'            => '.easy-wqv-summary-content .woocommerce-product-rating .woocommerce-review-link',
+                        'default'           => '#222'
+                    ),
+                    array(
+                        'id'                => 'ewqv_content_rating_color',
+                        'type'              => 'color',
+                        'title'             => __( 'Rating Color', 'easy-woo-quick-view' ),
+                        'output_important'  => true,
+                        'output'            => '.easy-wqv-summary-content .woocommerce-product-rating .star-rating',
+                        'default'           => '#dd9933'
+                    ),
+                    array(
+                        'type'              => 'subheading',
+                        'content'           => __( 'Price', 'easy-woo-quick-view' ),
+                    ),
+                    array(
+                        'id'                => 'ewqv_content_price_color',
+                        'type'              => 'color',
+                        'title'             => __( 'Color', 'easy-woo-quick-view' ),
+                        'output_important'  => true,
+                        'output'            => '.easy-wqv-summary-content .price',
+                        'default'           => '#77a464'
+                    ),
+                    array(
+                        'type'              => 'subheading',
+                        'content'           => __( 'Excerpt', 'easy-woo-quick-view' ),
+                    ),
+                    array(
+                        'id'                => 'ewqv_content_excerpt_color',
+                        'type'              => 'color',
+                        'title'             => __( 'Color', 'easy-woo-quick-view' ),
+                        'output_important'  => true,
+                        'output'            => '.easy-wqv-summary-content .woocommerce-product-details__short-description p',
+                        'default'           => '#222'
+                    ),
+                    array(
+                        'type'              => 'subheading',
+                        'content'           => __( 'Variations Form ', 'easy-woo-quick-view' ),
+                    ),
+                    array(
+                        'id'                => 'ewqv_content_variation_description',
+                        'type'              => 'switcher',
+                        'default'           => true,
+                        'title'             => __( 'Variation Description', 'easy-woo-quick-view' ),
+                    ),
+                    array(
+                        'id'                => 'ewqv_content_variation_label_color',
+                        'type'              => 'color',
+                        'title'             => __( 'Label Color', 'easy-woo-quick-view' ),
+                        'output_important'  => true,
+                        'output'            => '.easy-wqv-summary-content .variations_form .variations th',
+                        'default'           => '#222'
+                    ),
+                    array(
+                        'id'                => 'ewqv_content_variation_value_color',
+                        'type'              => 'color',
+                        'title'             => __( 'Value Color', 'easy-woo-quick-view' ),
+                        'output_important'  => true,
+                        'output'            => '.easy-wqv-summary-content .variations_form .variations td select',
+                        'default'           => '#222'
+                    ),
+                    array(
+                        'type'              => 'subheading',
+                        'content'           => __( 'Add To Cart', 'easy-woo-quick-view' ),
+                    ),
+                    array(
+                        'id'                => 'ewqv_content_add_to_cart_bg',
+                        'type'              => 'color',
+                        'title'             => __( 'Button Background Color', 'easy-woo-quick-view' ),
+                        'output_mode'       => 'background',
+                        'output_important'  => true,
+                        'output'            => '.easy-wqv-summary-content .cart .single_add_to_cart_button',
+                        'default'           => '#222'
+                    ),
+                    array(
+                        'id'                => 'ewqv_content_add_to_cart_bg_hover',
+                        'type'              => 'color',
+                        'title'             => __( 'Button Background Hover Color', 'easy-woo-quick-view' ),
+                        'output_mode'       => 'background',
+                        'output_important'  => true,
+                        'output'            => '.easy-wqv-summary-content .cart .single_add_to_cart_button:hover',
+                        'default'           => '#222'
+                    ),
+                    array(
+                        'id'                => 'ewqv_content_add_to_cart_text_color',
+                        'type'              => 'color',
+                        'title'             => __( 'Button Text Color', 'easy-woo-quick-view' ),
+                        'output_important'  => true,
+                        'output'            => '.easy-wqv-summary-content .cart .single_add_to_cart_button',
+                        'default'           => '#ffffff'
+                    ),
+                    array(
+                        'id'                => 'ewqv_content_add_to_cart_text_hover_color',
+                        'type'              => 'color',
+                        'title'             => __( 'Button Text Hover Color', 'easy-woo-quick-view' ),
+                        'output_important'  => true,
+                        'output'            => '.easy-wqv-summary-content .cart .single_add_to_cart_button:hover',
+                        'default'           => '#ffffff'
+                    ),
+                    array(
+                        'id'               => 'ewqv_content_add_to_cart_btn_padding',
+                        'type'             => 'spacing',
+                        'title'            => __( 'Button Padding', 'easy-woo-quick-view' ),
+                        'output'           => '.easy-wqv-summary-content .cart .single_add_to_cart_button',
+                        'output_mode'      => 'padding',
+                        'output_important' => true,
+                        'default'          => array(
+                            'top'    => '10',
+                            'right'  => '16',
+                            'bottom' => '10',
+                            'left'   => '16',
+                            'unit'   => 'px',
+                        ),
+                    ),
+                    array(
+                        'id'               => 'ewqv_content_add_to_cart_btn_margin',
+                        'type'             => 'spacing',
+                        'title'            => __( 'Button Margin', 'easy-woo-quick-view' ),
+                        'output'           => '.easy-wqv-summary-content .cart .single_add_to_cart_button',
+                        'output_mode'      => 'margin',
+                        'output_important' => true,
+                        'default'          => array(
+                            'top'    => '0',
+                            'right'  => '0',
+                            'bottom' => '0',
+                            'left'   => '0',
+                            'unit'   => 'px',
+                        ),
+                    ),
+                    array(
+                        'id'               => 'ewqv_content_add_to_cart_btn_border',
+                        'type'             => 'border',
+                        'title'            => __( 'Button Border', 'easy-woo-quick-view' ),
+                        'output'           => '.easy-wqv-summary-content .cart .single_add_to_cart_button',
+                        'output_important' => true,
+                        'default'          => array(
+                            'style'  => 'solid',
+                            'color'  => '#ffffff',
+                            'top'    => '0',
+                            'right'  => '0',
+                            'bottom' => '0',
+                            'left'   => '0',
+                            'unit'   => 'px',
+                        ),
+                    ),
+                    array(
+                        'type'    => 'subheading',
+                        'content' => __( 'Button Border radius', 'easy-woo-quick-view' ),
+                    ),
+                    array(
+                        'id'      => 'ewqv_content_add_to_cart_btn_border_radius_top',
+                        'type'    => 'number',
+                        'unit'    => 'px',
+                        'default' => '3',
+                        'title'   => __( 'Top', 'easy-woo-quick-view' ),
+                    ),
+                    array(
+                        'id'      => 'ewqv_content_add_to_cart_btn_border_radius_right',
+                        'type'    => 'number',
+                        'unit'    => 'px',
+                        'default' => '3',
+                        'title'   => __( 'Right', 'easy-woo-quick-view' ),
+                    ),
+                    array(
+                        'id'      => 'ewqv_content_add_to_cart_btn_border_radius_bottom',
+                        'type'    => 'number',
+                        'unit'    => 'px',
+                        'default' => '3',
+                        'title'   => __( 'Bottom', 'easy-woo-quick-view' ),
+                    ),
+                    array(
+                        'id'      => 'ewqv_content_add_to_cart_btn_border_radius_left',
+                        'type'    => 'number',
+                        'unit'    => 'px',
+                        'default' => '3',
+                        'title'   => __( 'Left', 'easy-woo-quick-view' ),
+                    ),
+                    array(
+                        'type'              => 'subheading',
+                        'content'           => __( 'Meta', 'easy-woo-quick-view' ),
+                    ),
+                    array(
+                        'id'                => 'ewqv_content_meta_color',
+                        'type'              => 'color',
+                        'title'             => __( 'Text Color', 'easy-woo-quick-view' ),
+                        'output_important'  => true,
+                        'output'            => '.easy-wqv-summary-content .product_meta, .easy-wqv-summary-content .product_meta .sku_wrapper, .easy-wqv-summary-content .product_meta .posted_in',
+                        'default'           => '#222'
+                    ),
+                    array(
+                        'id'                => 'ewqv_content_meta_link_color',
+                        'type'              => 'color',
+                        'title'             => __( 'Link Color', 'easy-woo-quick-view' ),
+                        'output_important'  => true,
+                        'output'            => '.easy-wqv-summary-content .product_meta a',
+                        'default'           => '#1e73be'
+                    ),
                 )
             ) );
   

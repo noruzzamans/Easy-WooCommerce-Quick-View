@@ -70,7 +70,7 @@
       padding: 0;
       font-size: 24px;
       margin: 0px !important;
-      line-height: 20px !important;
+      line-height: 20px;
       font-weight: 700;
       text-transform: none; }
     .easy-wqv-product-modal .easy-wqv-summary-wrapper .price {
@@ -106,8 +106,7 @@
       .easy-wqv-product-modal .easy-wqv-summary-wrapper .cart .single_add_to_cart_button {
         color: #ffffff;
         background: #333333;
-        padding: 0px 16px;
-        line-height: 35px; }
+        padding: 0px 16px; }
       .easy-wqv-product-modal .easy-wqv-summary-wrapper .cart .variations {
         border: 0; }
         .easy-wqv-product-modal .easy-wqv-summary-wrapper .cart .variations tbody tr th {

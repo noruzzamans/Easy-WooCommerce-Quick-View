@@ -85,7 +85,7 @@
                 padding: 0;
                 font-size: 24px;
                 margin: 0px !important;
-                line-height: 20px !important;
+                line-height: 20px;
                 font-weight: 700;
                 text-transform: none;
             }
@@ -132,7 +132,6 @@
                 color: #ffffff;
                 background: #333333;
                 padding: 0px 16px;
-                line-height: 35px;
             }
             .variations {
                 border: 0;
