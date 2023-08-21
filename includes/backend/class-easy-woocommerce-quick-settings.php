@@ -125,7 +125,7 @@ class Easy_WooCommerce_Quick_View_Settings {
                     'title' => __( 'Background Color', 'easy-woo-quick-view' ),
                     'output_mode' => 'background-color',
                     'output_important' => true,
-                    'output' => 'a.easy_woo_quick_view_btn',
+                    'output' => '.easy_woo_quick_view_btn',
                     'default' => '#eb7a61'
                 ),
                 array(
@@ -134,7 +134,7 @@ class Easy_WooCommerce_Quick_View_Settings {
                     'title' => __( 'Background Hover Color', 'easy-woo-quick-view' ),
                     'output_mode' => 'background-color',
                     'output_important' => true,
-                    'output' => 'a.easy_woo_quick_view_btn:hover',
+                    'output' => '.easy_woo_quick_view_btn:hover',
                     'default' => '#15c7a4'
                 ),
                 array(
@@ -142,7 +142,7 @@ class Easy_WooCommerce_Quick_View_Settings {
                     'type'        => 'color',
                     'title' => __( 'Text Color', 'easy-woo-quick-view' ),
                     'output_important' => true,
-                    'output' => 'a.easy_woo_quick_view_btn',
+                    'output' => '.easy_woo_quick_view_btn',
                     'default' => '#ffffff'
                 ),
                 array(
@@ -150,14 +150,14 @@ class Easy_WooCommerce_Quick_View_Settings {
                     'type'        => 'color',
                     'title' => __( 'Text Hover Color', 'easy-woo-quick-view' ),
                     'output_important' => true,
-                    'output' => 'a.easy_woo_quick_view_btn:hover',
+                    'output' => '.easy_woo_quick_view_btn:hover',
                     'default' => '#ffffff'
                 ),
                 array(
                     'id'               => 'ewqv_btn_padding',
                     'type'             => 'spacing',
                     'title'            => __( 'Padding', 'easy-woo-quick-view' ),
-                    'output'           => 'a.easy_woo_quick_view_btn',
+                    'output'           => '.easy_woo_quick_view_btn',
                     'output_mode'      => 'padding',
                     'output_important' => true,
                     'default'          => array(
@@ -172,7 +172,7 @@ class Easy_WooCommerce_Quick_View_Settings {
                     'id'               => 'ewqv_btn_margin',
                     'type'             => 'spacing',
                     'title'            => __( 'Margin', 'easy-woo-quick-view' ),
-                    'output'           => 'a.easy_woo_quick_view_btn',
+                    'output'           => '.easy_woo_quick_view_btn',
                     'output_mode'      => 'margin',
                     'output_important' => true,
                     'default'          => array(
@@ -187,7 +187,7 @@ class Easy_WooCommerce_Quick_View_Settings {
                     'id'               => 'ewqv_btn_border',
                     'type'             => 'border',
                     'title'            => __( 'Border', 'easy-woo-quick-view' ),
-                    'output'           => 'a.easy_woo_quick_view_btn',
+                    'output'           => '.easy_woo_quick_view_btn',
                     'output_important' => true,
                     'default'          => array(
                         'style'  => 'solid',

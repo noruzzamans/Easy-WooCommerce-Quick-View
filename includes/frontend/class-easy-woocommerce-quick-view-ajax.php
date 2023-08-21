@@ -36,7 +36,7 @@ class Easy_WooCommerce_Quick_View_Ajax {
 		$excerpt 		= isset($settings['ewqv_excerpt_switch']) ? $settings['ewqv_excerpt_switch'] : '';
 		$add_to_cart 	= isset($settings['ewqv_add_to_cart_switch']) ? $settings['ewqv_add_to_cart_switch'] : '';
 		$meta 			= isset($settings['ewqv_meta_switch']) ? $settings['ewqv_meta_switch'] : '';
-		$social_share			= isset($settings['ewqv_social_switch']) ? $settings['ewqv_social_switch'] : '';
+		$social_share	= isset($settings['ewqv_social_switch']) ? $settings['ewqv_social_switch'] : '';
 
 		if($title){
 			add_action( 'easy_wqv_product_summary', 'woocommerce_template_single_title', 5 );

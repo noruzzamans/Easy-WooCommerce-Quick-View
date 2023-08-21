@@ -32,10 +32,10 @@ class Easy_WooCommerce_Quick_View_Btn {
         if ( ! empty( $ewqv_position ) ) {
             switch ($ewqv_position) {
                 case 'over_product_image':
-                    add_action( 'woocommerce_before_shop_loop_item', [ $this, 'add_easy_woo_quick_view_button' ], 9 );
+                    add_action( 'woocommerce_before_shop_loop_item_title', [ $this, 'add_easy_woo_quick_view_button' ], 9 );
                     break;
                 case 'over_product_image_hover':
-                    add_action( 'woocommerce_before_shop_loop_item', [ $this, 'add_easy_woo_quick_view_button' ], 10);
+                    add_action( 'woocommerce_before_shop_loop_item_title', [ $this, 'add_easy_woo_quick_view_button' ], 10);
                     break;
                 case 'after_title':
                     add_action( 'woocommerce_shop_loop_item_title', [ $this, 'add_easy_woo_quick_view_button' ], 11 );
@@ -77,7 +77,7 @@ class Easy_WooCommerce_Quick_View_Btn {
         $label = $ewqv_btn_label;
         $product_id = $product->get_id();
         
-        return '<a href="#" id="easy_woo_quick_view_btn" class="easy_woo_quick_view_btn button" data-product-id="'. $product_id .'">'. $label .'</a>';
+        return '<button id="easy_woo_quick_view_btn" class="easy_woo_quick_view_btn button" data-product-id="'. $product_id .'">'. $label .'</button>';
     }
 }
 

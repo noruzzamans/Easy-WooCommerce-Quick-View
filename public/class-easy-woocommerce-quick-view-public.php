@@ -81,13 +81,43 @@ class Easy_Woocommerce_Quick_View_Public {
 		
         $ewqv_content_variation_description = isset($settings['ewqv_content_variation_description']) ? $settings['ewqv_content_variation_description'] : '';
 
+        $ewqv_btn_position 					= isset($settings['ewqv_btn_position']) ? $settings['ewqv_btn_position'] : '';
+
 
         ?>
         <style>
-            a.easy_woo_quick_view_btn {
+            .easy_woo_quick_view_btn {
                 transition: ease-in-out .5s !important;
             }
-            a.easy_woo_quick_view_btn {
+			<?php if($ewqv_btn_position == 'over_product_image'): ?>
+				.easy_woo_quick_view_btn {
+					position: absolute !important;
+				}
+			<?php endif; ?>
+			<?php if($ewqv_btn_position == 'over_product_image_hover'): ?>
+				button.easy_woo_quick_view_btn {
+					position: absolute !important;
+					opacity: 1;
+					transition: opacity 0.5s ease !important;
+					padding: 0 !important;
+					margin: 0 !important;
+					font-size: 0 !important;
+					background-color: #fff !important;
+					width: 45px !important;
+					height: 45px !important;
+					display: inline-block !important;
+					border-radius: 50% !important;
+					text-decoration: none !important;
+					border: 1px solid #aaa !important;
+				}
+				button.easy_woo_quick_view_btn::before{
+					content: '';
+				}
+				.woocommerce-LoopProduct-link:hover .easy_woo_quick_view_btn {
+					opacity: 1;
+				}
+			<?php endif; ?>
+            .easy_woo_quick_view_btn {
                 border-top-left-radius:     <?php echo esc_html($ewqv_btn_border_radius_top); ?>px!important;
                 border-top-right-radius:    <?php echo esc_html($ewqv_btn_border_radius_right); ?>px!important;
                 border-bottom-right-radius: <?php echo esc_html($ewqv_btn_border_radius_bottom); ?>px!important;
