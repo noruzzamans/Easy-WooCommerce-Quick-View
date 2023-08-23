@@ -96,6 +96,61 @@ class Easy_WooCommerce_Quick_View_Settings {
                     'default' => __( 'Quick View', 'easy-woo-quick-view' ),
                 ),
                 array(
+                    'id'            => 'ewqv_icon_switch',
+                    'type'          => 'switcher',
+                    'default'       => false,
+                    'title'         => __( 'Enable Quick View Icon', 'easy-woo-quick-view' ),
+                    'desc'          => __( 'To display only the icon, remove the button text.', 'easy-woo-quick-view' ),
+                ), 
+                array(
+                    'id'            => 'ewqv_btn_icon',
+                    'type'          => 'icon',
+                    'title'         => __( 'Icon', 'easy-woo-quick-view' ),
+                    'default'       => 'far fa-eye',
+                    'dependency'    => array( 'ewqv_icon_switch', '==', 'true' )
+                ),
+                array(
+                    'id'          => 'ewqv_btn_icon_select',
+                    'type'        => 'select',
+                    'title'       => __( 'Icon Position', 'easy-woo-quick-view' ),
+                    'options'     => array(
+                      'before'  => 'Before',
+                      'after'  => 'After',
+                    ),
+                    'default' => 'before',
+                    'dependency'    => array( 'ewqv_icon_switch', '==', 'true' )
+                ),
+                array(
+                    'id'            => 'ewqv_btn_icon_margin_right',
+                    'type'          => 'spacing',
+                    'title'         => __( 'Icon Margin Right', 'easy-woo-quick-view' ),
+                    'output_mode'   => 'margin',
+                    'top'           => false,
+                    'bottom'        => false,
+                    'right'         => true,
+                    'left'          => false,
+                    'default'  => array(
+                        'right'  => '0',
+                        'unit'   => 'px',
+                    ),
+                    'dependency'    => array( 'ewqv_icon_switch', '==', 'true' )
+                ),
+                array(
+                    'id'            => 'ewqv_btn_icon_margin_left',
+                    'type'          => 'spacing',
+                    'title'         => __( 'Icon Margin Right', 'easy-woo-quick-view' ),
+                    'output_mode'   => 'margin',
+                    'top'           => false,
+                    'bottom'        => false,
+                    'right'         => false,
+                    'left'          => true,
+                    'default'  => array(
+                        'left'  => '0',
+                        'unit'   => 'px',
+                    ),
+                    'dependency'    => array( 'ewqv_icon_switch', '==', 'true')
+                ),             
+                array(
                     'id'               => 'ewqv_btn_font_family',
                     'title'            => __( 'Typography', 'easy-woo-quick-view' ),
                     'type'             => 'typography',

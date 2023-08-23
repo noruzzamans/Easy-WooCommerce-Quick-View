@@ -2,6 +2,18 @@
 	'use strict';
 
 	$(document).ready(function() {
+
+		if (typeof ewqv_btn !== 'undefined' && ewqv_btn.icon) {
+			let iconClass = ewqv_btn.icon;
+			let iconElement = $('<i class="' + iconClass + '"></i>');
+			if (ewqv_btn.icon_position === 'before') {
+				$('.easy_woo_quick_view_btn').prepend(iconElement);
+			} else {
+				$('.easy_woo_quick_view_btn').append(iconElement);
+			}
+		}
+
+
 		$('.easy_woo_quick_view_btn').on('click', function(e) {
 			e.preventDefault();
 			let productId = $(this).data('product-id');

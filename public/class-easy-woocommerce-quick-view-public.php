@@ -82,39 +82,37 @@ class Easy_Woocommerce_Quick_View_Public {
         $ewqv_content_variation_description = isset($settings['ewqv_content_variation_description']) ? $settings['ewqv_content_variation_description'] : '';
 
         $ewqv_btn_position 					= isset($settings['ewqv_btn_position']) ? $settings['ewqv_btn_position'] : '';
-
-
+        $ewqv_btn_icon_select 				= isset($settings['ewqv_btn_icon_select']) ? $settings['ewqv_btn_icon_select'] : '';
+        $ewqv_btn_icon_margin_right 		= isset($settings['ewqv_btn_icon_margin_right']['right']) ? $settings['ewqv_btn_icon_margin_right']['right'] : '';
+        $ewqv_btn_icon_margin_left 			= isset($settings['ewqv_btn_icon_margin_left']['left']) ? $settings['ewqv_btn_icon_margin_left']['left'] : '';
         ?>
+
         <style>
             .easy_woo_quick_view_btn {
                 transition: ease-in-out .5s !important;
             }
 			<?php if($ewqv_btn_position == 'over_product_image'): ?>
-				.easy_woo_quick_view_btn {
+				button.easy_woo_quick_view_btn {
 					position: absolute !important;
 				}
 			<?php endif; ?>
 			<?php if($ewqv_btn_position == 'over_product_image_hover'): ?>
 				button.easy_woo_quick_view_btn {
 					position: absolute !important;
-					opacity: 1;
-					transition: opacity 0.5s ease !important;
-					padding: 0 !important;
-					margin: 0 !important;
-					font-size: 0 !important;
-					background-color: #fff !important;
-					width: 45px !important;
-					height: 45px !important;
-					display: inline-block !important;
-					border-radius: 50% !important;
-					text-decoration: none !important;
-					border: 1px solid #aaa !important;
-				}
-				button.easy_woo_quick_view_btn::before{
-					content: '';
+					opacity: 0;
 				}
 				.woocommerce-LoopProduct-link:hover .easy_woo_quick_view_btn {
 					opacity: 1;
+				} 
+			<?php endif; ?>
+			<?php if($ewqv_btn_icon_select == 'before'): ?>
+				.easy_woo_quick_view_btn i {
+					margin-right: <?php echo $ewqv_btn_icon_margin_right ; ?>px;
+				}
+			<?php endif; ?>
+			<?php if($ewqv_btn_icon_select == 'after'): ?>
+				.easy_woo_quick_view_btn i {
+					margin-left: <?php echo $ewqv_btn_icon_margin_left ; ?>px;
 				}
 			<?php endif; ?>
             .easy_woo_quick_view_btn {
@@ -155,7 +153,6 @@ class Easy_Woocommerce_Quick_View_Public {
 			}
         </style>
         <?php
-
 		wp_enqueue_style( $this->plugin_name. '-font-awesome', 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css', array(), $this->version, 'all' );
 		wp_enqueue_style( $this->plugin_name. '-slick', plugin_dir_url( __FILE__ ) . 'css/slick.min.css', array(), $this->version, 'all' );
 		wp_enqueue_style( $this->plugin_name.'-magnific', plugin_dir_url( __FILE__ ) . 'css/easy-woocommerce-quick-view-public-magnific.css', array(), $this->version, 'all' );
@@ -179,11 +176,15 @@ class Easy_Woocommerce_Quick_View_Public {
 			'nonce'    => wp_create_nonce( 'easy_woocommerce_quick_view_nonce' ),
 		));
 		
-		$settings = Easy_WooCommerce_Quick_View_Settings::get_settings();
-		$ewqv_position = $settings['ewqv_btn_position'];
-		if($ewqv_position){
+		$settings 				= Easy_WooCommerce_Quick_View_Settings::get_settings();
+		$ewqv_icon_switch 		= isset( $settings['ewqv_icon_switch'] ) ? $settings['ewqv_icon_switch'] : '';
+		$ewqv_btn_icon 			= isset( $settings['ewqv_btn_icon'] ) ? $settings['ewqv_btn_icon'] : '';
+		$ewqv_btn_icon_select 	= isset( $settings['ewqv_btn_icon_select'] ) ? $settings['ewqv_btn_icon_select'] : '';
+
+		if ($ewqv_icon_switch) {
 			wp_localize_script($this->plugin_name, 'ewqv_btn', array(
-				'ewqv_btn_position'    => $ewqv_position,
+				'icon' 			=> $ewqv_btn_icon,
+				'icon_position' => $ewqv_btn_icon_select,
 			));
 		}
 	}
