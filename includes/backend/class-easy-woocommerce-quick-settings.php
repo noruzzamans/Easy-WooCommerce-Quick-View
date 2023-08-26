@@ -401,6 +401,36 @@ class Easy_WooCommerce_Quick_View_Settings {
                         'default'           => true,
                         'title'             => __( 'Slider Dot Show/Hide', 'easy-woo-quick-view' ),
                     ),
+                    array(
+                        'id'      => 'ewqv_slider_btn_icon_size',
+                        'type'    => 'number',
+                        'title'   => __( 'Slider Icon size', 'easy-woo-quick-view' ),
+                        'default'       => 24,
+                    ),
+                    array(
+                        'id'      => 'ewqv_slider_btn_icon_color',
+                        'type'    => 'color',
+                        'title'   => __( 'Slider Icon Color', 'easy-woo-quick-view' ),
+                        'default' => '#222'
+                    ),
+                    array(
+                        'id'      => 'ewqv_slider_btn_icon_hover_color',
+                        'type'    => 'color',
+                        'title'   => __( 'Slider Icon Hover Color', 'easy-woo-quick-view' ),
+                        'default' => '#fff'
+                    ),
+                    array(
+                        'id'            => 'ewqv_slider_btn_left_icon',
+                        'type'          => 'icon',
+                        'title'         => __( 'Slider Left Icon', 'easy-woo-quick-view' ),
+                        'default'       => 'fas fa-chevron-left',
+                    ),
+                    array(
+                        'id'            => 'ewqv_slider_btn_right_icon',
+                        'type'          => 'icon',
+                        'title'         => __( 'Slider Right Icon', 'easy-woo-quick-view' ),
+                        'default'       => 'fas fa-chevron-right',
+                    ),
                 )
             ) );
             // Content Settings

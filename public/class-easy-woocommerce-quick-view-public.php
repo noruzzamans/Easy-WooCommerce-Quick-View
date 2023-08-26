@@ -74,7 +74,10 @@ class Easy_Woocommerce_Quick_View_Public {
 		$ewqv_close_btn_switch				= isset($settings['ewqv_close_btn_switch']) ? $settings['ewqv_close_btn_switch'] : '';
 		$ewqv_review_link_switch			= isset($settings['ewqv_review_link_switch']) ? $settings['ewqv_review_link_switch'] : '';
 
-		$ewqv_slider_dot_switch			= isset($settings['ewqv_slider_dot_switch']) ? $settings['ewqv_slider_dot_switch'] : '';
+		$ewqv_slider_dot_switch				= isset($settings['ewqv_slider_dot_switch']) ? $settings['ewqv_slider_dot_switch'] : '';
+		$ewqv_slider_btn_icon_size			= isset($settings['ewqv_slider_btn_icon_size']) ? $settings['ewqv_slider_btn_icon_size'] : '';
+		$ewqv_slider_btn_icon_color			= isset($settings['ewqv_slider_btn_icon_color']) ? $settings['ewqv_slider_btn_icon_color'] : '';
+		$ewqv_slider_btn_icon_hover_color	= isset($settings['ewqv_slider_btn_icon_hover_color']) ? $settings['ewqv_slider_btn_icon_hover_color'] : '';
 
 		$ewqv_cart_btn_border_radius_top    = isset($settings['ewqv_content_add_to_cart_btn_border_radius_top']) ? $settings['ewqv_content_add_to_cart_btn_border_radius_top'] : '';
         $ewqv_cart_btn_border_radius_right  = isset($settings['ewqv_content_add_to_cart_btn_border_radius_right']) ? $settings['ewqv_content_add_to_cart_btn_border_radius_right'] : '';
@@ -89,7 +92,7 @@ class Easy_Woocommerce_Quick_View_Public {
         $ewqv_btn_icon_select 				= isset($settings['ewqv_btn_icon_select']) ? $settings['ewqv_btn_icon_select'] : '';
         $ewqv_btn_icon_margin_right 		= isset($settings['ewqv_btn_icon_margin_right']['right']) ? $settings['ewqv_btn_icon_margin_right']['right'] : '';
         $ewqv_btn_icon_margin_left 			= isset($settings['ewqv_btn_icon_margin_left']['left']) ? $settings['ewqv_btn_icon_margin_left']['left'] : '';
-		var_dump($ewqv_slider_dot_switch);
+
         ?>
 
         <style>
@@ -171,6 +174,21 @@ class Easy_Woocommerce_Quick_View_Public {
 					display: none !important;
 				}
 			<?php endif; ?>
+			<?php if($ewqv_slider_btn_icon_size) : ?>
+				.easy-wqv-product-modal .slick-arrow i {
+					font-size: <?php echo $ewqv_slider_btn_icon_size ; ?>px !important;
+				}
+			<?php endif; ?>
+			<?php if($ewqv_slider_btn_icon_color) : ?>
+				.easy-wqv-product-modal .slick-arrow i {
+					color: <?php echo $ewqv_slider_btn_icon_color ; ?> !important;
+				}
+			<?php endif; ?>
+			<?php if($ewqv_slider_btn_icon_hover_color) : ?>
+				.easy-wqv-product-modal .slick-arrow i:hover {
+					color: <?php echo $ewqv_slider_btn_icon_hover_color ; ?> !important;
+				}
+			<?php endif; ?>
         </style>
         <?php
 		wp_enqueue_style( $this->plugin_name. '-font-awesome', 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css', array(), $this->version, 'all' );
@@ -201,12 +219,18 @@ class Easy_Woocommerce_Quick_View_Public {
 		$ewqv_btn_icon 			= isset( $settings['ewqv_btn_icon'] ) ? $settings['ewqv_btn_icon'] : '';
 		$ewqv_btn_icon_select 	= isset( $settings['ewqv_btn_icon_select'] ) ? $settings['ewqv_btn_icon_select'] : '';
 
+		$ewqv_slider_btn_left_icon				= isset($settings['ewqv_slider_btn_left_icon']) ? $settings['ewqv_slider_btn_left_icon'] : '';
+		$ewqv_slider_btn_right_icon				= isset($settings['ewqv_slider_btn_right_icon']) ? $settings['ewqv_slider_btn_right_icon'] : '';
 		if ($ewqv_icon_switch) {
 			wp_localize_script($this->plugin_name, 'ewqv_btn', array(
 				'icon' 			=> $ewqv_btn_icon,
 				'icon_position' => $ewqv_btn_icon_select,
 			));
 		}
+		wp_localize_script($this->plugin_name, 'ewqv_slidrt_icon', array(
+			'left' 			=> $ewqv_slider_btn_left_icon,
+			'right' => $ewqv_slider_btn_right_icon,
+		));
 	}
 
 }
