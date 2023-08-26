@@ -13,9 +13,9 @@
   display: flex; }
   @media only screen and (max-width: 767px) {
     .easy-wqv-product-modal {
-      max-width: 430px;
-      max-height: inherit;
-      display: block; } }
+      max-width: 430px !important;
+      max-height: inherit !important;
+      display: block !important; } }
   .easy-wqv-product-modal .easy-wqv-product-images {
     width: 50%;
     overflow: hidden;

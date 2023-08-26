@@ -303,13 +303,6 @@ class Easy_WooCommerce_Quick_View_Settings {
                     'type'              => 'dimensions',
                     'title'             => __( 'Modal Size', 'easy-woo-quick-view' ),
                     'subtitle'          => __( 'For best results, use 2:1 width-to-height ratio.', 'easy-woo-quick-view' ),
-                    'output'            => '.easy-wqv-product-modal',
-                    'output_important'  => true,
-                    'default'           => array(
-                      'width'           => '900',
-                      'height'          => '450',
-                      'unit'            => 'px',
-                    ),
                 ),
                 array(
                     'id'                => 'ewqv_modal_z_index',
@@ -536,7 +529,7 @@ class Easy_WooCommerce_Quick_View_Settings {
                     array(
                         'id'                => 'ewqv_content_variation_description',
                         'type'              => 'switcher',
-                        'default'           => true,
+                        'default'           => false,
                         'title'             => __( 'Variation Description', 'easy-woo-quick-view' ),
                     ),
                     array(

@@ -12,9 +12,9 @@
     box-sizing: border-box;
     display: flex;
     @media only screen and (max-width: 767px) { 
-        max-width: 430px;
-        max-height: inherit;
-        display: block;
+        max-width: 430px !important;
+        max-height: inherit !important;
+        display: block !important;
     }
     .easy-wqv-product-images {
         width: 50%;
