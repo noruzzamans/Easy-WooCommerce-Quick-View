@@ -391,7 +391,16 @@ class Easy_WooCommerce_Quick_View_Settings {
                 'name'   => 'ewqv_thumbnails_settings',
                 'title'  => __( 'Thumbnails Settings', 'easy-woo-quick-view' ),
                 'fields' => array(
-             
+                    array(
+                        'type'              => 'subheading',
+                        'content'           => __( 'Slider Setting', 'easy-woo-quick-view' ),
+                    ),
+                    array(
+                        'id'                => 'ewqv_slider_dot_switch',
+                        'type'              => 'switcher',
+                        'default'           => true,
+                        'title'             => __( 'Slider Dot Show/Hide', 'easy-woo-quick-view' ),
+                    ),
                 )
             ) );
             // Content Settings
