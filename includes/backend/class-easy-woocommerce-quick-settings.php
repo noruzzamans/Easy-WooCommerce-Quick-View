@@ -121,6 +121,16 @@ class Easy_WooCommerce_Quick_View_Settings {
                     'dependency'    => array( 'ewqv_icon_switch', '==', 'true' )
                 ),
                 array(
+                    'id' => 'ewqv_btn_icon_alignment',
+                    'type' => 'select',
+                    'title' => __( 'Button alignment', 'easy-woo-quick-view' ),
+                    'options' => array(
+                        'left' => __( 'Left', 'easy-woo-quick-view' ),
+                        'right' => __( 'Right', 'easy-woo-quick-view' ),
+                    ),
+                    'desc' => __( 'This alignment works when you select Over Product Image or Over Product Image options', 'easy-woo-quick-view' ),
+                ),
+                array(
                     'id'            => 'ewqv_btn_icon_margin_right',
                     'type'          => 'spacing',
                     'title'         => __( 'Icon Margin Right', 'easy-woo-quick-view' ),
@@ -405,7 +415,8 @@ class Easy_WooCommerce_Quick_View_Settings {
                         'id'      => 'ewqv_slider_btn_icon_size',
                         'type'    => 'number',
                         'title'   => __( 'Slider Icon size', 'easy-woo-quick-view' ),
-                        'default'       => 24,
+                        'default' => 24,
+                        'unit'    => 'px',
                     ),
                     array(
                         'id'      => 'ewqv_slider_btn_icon_color',
@@ -418,6 +429,20 @@ class Easy_WooCommerce_Quick_View_Settings {
                         'type'    => 'color',
                         'title'   => __( 'Slider Icon Hover Color', 'easy-woo-quick-view' ),
                         'default' => '#fff'
+                    ),
+                    array(
+                        'id'      => 'ewqv_slider_btn_icon_bg_color',
+                        'type'    => 'color',
+                        'title'   => __( 'Slider Icon Background Color', 'easy-woo-quick-view' ),
+                        'output_mode'   => 'background-color',
+                        'default' => 'transparent'
+                    ),
+                    array(
+                        'id'      => 'ewqv_slider_btn_icon_bg_hover_color',
+                        'type'    => 'color',
+                        'title'   => __( 'Slider Icon Background Hover Color', 'easy-woo-quick-view' ),
+                        'output_mode'   => 'background-color',
+                        'default' => '#00000080'
                     ),
                     array(
                         'id'            => 'ewqv_slider_btn_left_icon',
