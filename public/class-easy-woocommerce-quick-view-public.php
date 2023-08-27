@@ -68,7 +68,9 @@ class Easy_Woocommerce_Quick_View_Public {
         $ewqv_btn_border_radius_bottom     	= isset($settings['ewqv_btn_border_radius_bottom']) ? $settings['ewqv_btn_border_radius_bottom'] : '';
         $ewqv_btn_border_radius_left       	= isset($settings['ewqv_btn_border_radius_left']) ? $settings['ewqv_btn_border_radius_left'] : '';
 
-        $ewqv_btn_icon_alignment       		= isset($settings['ewqv_btn_icon_alignment']) ? $settings['ewqv_btn_icon_alignment'] : '';
+        $ewqv_btn_align_position_top       		= isset($settings['ewqv_btn_align_position_top']) ? $settings['ewqv_btn_align_position_top'] : '';
+        $ewqv_btn_align_position_top_left   	= isset($settings['ewqv_btn_align_position_top_left']) ? $settings['ewqv_btn_align_position_top_left'] : '';
+        $ewqv_btn_align_position_top_right   	= isset($settings['ewqv_btn_align_position_top_right']) ? $settings['ewqv_btn_align_position_top_right'] : '';
 
 		$ewqv_modal_width					= isset($settings['ewqv_modal_width_height']['width']) ? $settings['ewqv_modal_width_height']['width'] : '';
 		$ewqv_modal_height					= isset($settings['ewqv_modal_width_height']['height']) ? $settings['ewqv_modal_width_height']['height'] : '';
@@ -139,24 +141,18 @@ class Easy_Woocommerce_Quick_View_Public {
 			<?php if($ewqv_btn_position == 'over_product_image'): ?>
 				button.easy_woo_quick_view_btn {
 					position: absolute !important;
+					top: 	<?php echo $ewqv_btn_align_position_top; ?>px !important;
+					left: 	<?php echo $ewqv_btn_align_position_top_left; ?>px !important;
+					right: 	<?php echo $ewqv_btn_align_position_top_right; ?>px !important;
 				}
-				<?php if($ewqv_btn_icon_alignment == 'left'): ?>
-					button.easy_woo_quick_view_btn {
-						top: 0 !important;
-						left: 0 !important;
-					}
-				<?php endif; ?>
-				<?php if($ewqv_btn_icon_alignment == 'right'): ?>
-					button.easy_woo_quick_view_btn {
-						top: 0 !important;
-						right: 0 !important;
-					}
-				<?php endif; ?>
 			<?php endif; ?>
 			<?php if($ewqv_btn_position == 'over_product_image_hover'): ?>
 				button.easy_woo_quick_view_btn {
 					position: absolute !important;
 					opacity: 0;
+					top: 	<?php echo $ewqv_btn_align_position_top; ?>px !important;
+					left: 	<?php echo $ewqv_btn_align_position_top_left; ?>px !important;
+					right: 	<?php echo $ewqv_btn_align_position_top_right; ?>px !important;
 				}
 				.woocommerce-LoopProduct-link:hover .easy_woo_quick_view_btn {
 					opacity: 1;

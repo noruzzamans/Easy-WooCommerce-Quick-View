@@ -121,16 +121,6 @@ class Easy_WooCommerce_Quick_View_Settings {
                     'dependency'    => array( 'ewqv_icon_switch', '==', 'true' )
                 ),
                 array(
-                    'id' => 'ewqv_btn_icon_alignment',
-                    'type' => 'select',
-                    'title' => __( 'Button alignment', 'easy-woo-quick-view' ),
-                    'options' => array(
-                        'left' => __( 'Left', 'easy-woo-quick-view' ),
-                        'right' => __( 'Right', 'easy-woo-quick-view' ),
-                    ),
-                    'desc' => __( 'This alignment works when you select Over Product Image or Over Product Image options', 'easy-woo-quick-view' ),
-                ),
-                array(
                     'id'            => 'ewqv_btn_icon_margin_right',
                     'type'          => 'spacing',
                     'title'         => __( 'Icon Margin Right', 'easy-woo-quick-view' ),
@@ -148,7 +138,7 @@ class Easy_WooCommerce_Quick_View_Settings {
                 array(
                     'id'            => 'ewqv_btn_icon_margin_left',
                     'type'          => 'spacing',
-                    'title'         => __( 'Icon Margin Right', 'easy-woo-quick-view' ),
+                    'title'         => __( 'Icon Margin Left', 'easy-woo-quick-view' ),
                     'output_mode'   => 'margin',
                     'top'           => false,
                     'bottom'        => false,
@@ -159,7 +149,31 @@ class Easy_WooCommerce_Quick_View_Settings {
                         'unit'   => 'px',
                     ),
                     'dependency'    => array( 'ewqv_icon_switch', '==', 'true')
-                ),             
+                ),
+                array(
+                    'id'         => 'ewqv_btn_align_position_top',
+                    'type'       => 'number',
+                    'unit'       => 'px',
+                    'title'      => __( 'Top', 'boomdevs-toc' ),
+                    'desc'       => __( 'Position Top works when you select Over Product Image or Over Product Image options', 'easy-woo-quick-view' ),
+                    'default'    => 0,
+                ),
+                array(
+                    'id'         => 'ewqv_btn_align_position_top_left',
+                    'type'       => 'number',
+                    'unit'       => 'px',
+                    'title'      => __( 'Top left', 'boomdevs-toc' ),
+                    'desc'       => __( 'Position Top left works when you select Over Product Image or Over Product Image options', 'easy-woo-quick-view' ),
+                    'default'    => '',
+                ),
+                array(
+                    'id'         => 'ewqv_btn_align_position_top_right',
+                    'type'       => 'number',
+                    'unit'       => 'px',
+                    'title'      => __( 'Top right', 'boomdevs-toc' ),
+                    'default'    => '',
+                    'desc'       => __( 'Position Top right works when you select Over Product Image or Over Product Image options', 'easy-woo-quick-view' ),
+                ),           
                 array(
                     'id'               => 'ewqv_btn_font_family',
                     'title'            => __( 'Typography', 'easy-woo-quick-view' ),
