@@ -64,14 +64,14 @@ class Easy_WooCommerce_Quick_View_Settings {
             // General Settings
             CSF::createSection( $prefix, array(
             'name'   => 'ewqv_general_settings',
-            'title'  => __( 'Button Settings', 'easy-woo-quick-view' ),
+            'title'  => __( 'Button', 'easy-woo-quick-view' ),
             'fields' => array(
                 array(
                     'id'    => 'ewqv_switch',
                     'type'  => 'switcher',
                     'default' => true,
                     'output'  => '.easy_woo_quick_view_btn',
-                    'title'  => __( 'Enable Quick View', 'easy-woo-quick-view' ),
+                    'title'  => __( 'Enable quick view', 'easy-woo-quick-view' ),
                 ), 
                 array(
                     'id'       => 'ewqv_btn_position',
@@ -79,13 +79,13 @@ class Easy_WooCommerce_Quick_View_Settings {
                     'title'    => __( 'Position', 'easy-woo-quick-view' ),
                     'subtitle' => __( 'Choose the placement of the quick view button.', 'easy-woo-quick-view' ),
                     'options'  => array(
-                        'over_product_image'        => __( 'Over Product Image', 'easy-woo-quick-view' ),
-                        'over_product_image_hover'        => __( 'Over Product Image Hover', 'easy-woo-quick-view' ),
-                        'after_title'        => __( 'After Title', 'easy-woo-quick-view' ),
-                        'after_rating'        => __( 'After Rating', 'easy-woo-quick-view' ),
-                        'after_price'        => __( 'After Price', 'easy-woo-quick-view' ),
-                        'before_add_to_cart'        => __( 'Before Add to Cart button', 'easy-woo-quick-view' ),
-                        'after_add_to_cart'         => __( 'After Add to Cart button', 'easy-woo-quick-view' ),
+                        'over_product_image'        => __( 'Over product image', 'easy-woo-quick-view' ),
+                        'over_product_image_hover'        => __( 'Over product image hover', 'easy-woo-quick-view' ),
+                        'after_title'        => __( 'After title', 'easy-woo-quick-view' ),
+                        'after_rating'        => __( 'After rating', 'easy-woo-quick-view' ),
+                        'after_price'        => __( 'After price', 'easy-woo-quick-view' ),
+                        'before_add_to_cart'        => __( 'Before add to cart button', 'easy-woo-quick-view' ),
+                        'after_add_to_cart'         => __( 'After add to cart button', 'easy-woo-quick-view' ),
                     ),
                     'default'  => 'after_add_to_cart',
                 ),
@@ -99,7 +99,7 @@ class Easy_WooCommerce_Quick_View_Settings {
                     'id'            => 'ewqv_icon_switch',
                     'type'          => 'switcher',
                     'default'       => false,
-                    'title'         => __( 'Enable Quick View Icon', 'easy-woo-quick-view' ),
+                    'title'         => __( 'Enable icon', 'easy-woo-quick-view' ),
                     'desc'          => __( 'To display only the icon, remove the button text.', 'easy-woo-quick-view' ),
                 ), 
                 array(
@@ -112,7 +112,7 @@ class Easy_WooCommerce_Quick_View_Settings {
                 array(
                     'id'          => 'ewqv_btn_icon_select',
                     'type'        => 'select',
-                    'title'       => __( 'Icon Position', 'easy-woo-quick-view' ),
+                    'title'       => __( 'Icon position', 'easy-woo-quick-view' ),
                     'options'     => array(
                       'before'  => 'Before',
                       'after'  => 'After',
@@ -123,7 +123,7 @@ class Easy_WooCommerce_Quick_View_Settings {
                 array(
                     'id'            => 'ewqv_btn_icon_margin_right',
                     'type'          => 'spacing',
-                    'title'         => __( 'Icon Margin Right', 'easy-woo-quick-view' ),
+                    'title'         => __( 'Icon margin right', 'easy-woo-quick-view' ),
                     'output_mode'   => 'margin',
                     'top'           => false,
                     'bottom'        => false,
@@ -138,7 +138,7 @@ class Easy_WooCommerce_Quick_View_Settings {
                 array(
                     'id'            => 'ewqv_btn_icon_margin_left',
                     'type'          => 'spacing',
-                    'title'         => __( 'Icon Margin Left', 'easy-woo-quick-view' ),
+                    'title'         => __( 'Icon margin left', 'easy-woo-quick-view' ),
                     'output_mode'   => 'margin',
                     'top'           => false,
                     'bottom'        => false,
@@ -155,7 +155,7 @@ class Easy_WooCommerce_Quick_View_Settings {
                     'type'       => 'number',
                     'unit'       => 'px',
                     'title'      => __( 'Top', 'boomdevs-toc' ),
-                    'desc'       => __( 'Position Top works when you select Over Product Image or Over Product Image options', 'easy-woo-quick-view' ),
+                    'desc'       => __( 'Position top works when you select Over Product Image or Over Product Image options', 'easy-woo-quick-view' ),
                     'default'    => 0,
                 ),
                 array(
@@ -163,7 +163,7 @@ class Easy_WooCommerce_Quick_View_Settings {
                     'type'       => 'number',
                     'unit'       => 'px',
                     'title'      => __( 'Top left', 'boomdevs-toc' ),
-                    'desc'       => __( 'Position Top left works when you select Over Product Image or Over Product Image options', 'easy-woo-quick-view' ),
+                    'desc'       => __( 'Position top left works when you select Over Product Image or Over Product Image options', 'easy-woo-quick-view' ),
                     'default'    => '',
                 ),
                 array(
@@ -172,7 +172,7 @@ class Easy_WooCommerce_Quick_View_Settings {
                     'unit'       => 'px',
                     'title'      => __( 'Top right', 'boomdevs-toc' ),
                     'default'    => '',
-                    'desc'       => __( 'Position Top right works when you select Over Product Image or Over Product Image options', 'easy-woo-quick-view' ),
+                    'desc'       => __( 'Position top right works when you select Over Product Image or Over Product Image options', 'easy-woo-quick-view' ),
                 ),           
                 array(
                     'id'               => 'ewqv_btn_font_family',
@@ -201,7 +201,7 @@ class Easy_WooCommerce_Quick_View_Settings {
                 array(
                     'id'      => 'ewqv_btn_bg_color',
                     'type'        => 'color',
-                    'title' => __( 'Background Color', 'easy-woo-quick-view' ),
+                    'title' => __( 'Background color', 'easy-woo-quick-view' ),
                     'output_mode' => 'background-color',
                     'output_important' => true,
                     'output' => '.easy_woo_quick_view_btn',
@@ -210,7 +210,7 @@ class Easy_WooCommerce_Quick_View_Settings {
                 array(
                     'id'      => 'ewqv_btn_bg_hover_color',
                     'type'        => 'color',
-                    'title' => __( 'Background Hover Color', 'easy-woo-quick-view' ),
+                    'title' => __( 'Background hover color', 'easy-woo-quick-view' ),
                     'output_mode' => 'background-color',
                     'output_important' => true,
                     'output' => '.easy_woo_quick_view_btn:hover',
@@ -219,7 +219,7 @@ class Easy_WooCommerce_Quick_View_Settings {
                 array(
                     'id'      => 'ewqv_btn_color',
                     'type'        => 'color',
-                    'title' => __( 'Text Color', 'easy-woo-quick-view' ),
+                    'title' => __( 'Text color', 'easy-woo-quick-view' ),
                     'output_important' => true,
                     'output' => '.easy_woo_quick_view_btn',
                     'default' => '#ffffff'
@@ -227,7 +227,7 @@ class Easy_WooCommerce_Quick_View_Settings {
                 array(
                     'id'      => 'ewqv_btn_hover_color',
                     'type'        => 'color',
-                    'title' => __( 'Text Hover Color', 'easy-woo-quick-view' ),
+                    'title' => __( 'Text hover color', 'easy-woo-quick-view' ),
                     'output_important' => true,
                     'output' => '.easy_woo_quick_view_btn:hover',
                     'default' => '#ffffff'
@@ -280,7 +280,7 @@ class Easy_WooCommerce_Quick_View_Settings {
                 ),
                 array(
                     'type'    => 'subheading',
-                    'content' => __( 'Border radius', 'easy-woo-quick-view' ),
+                    'content' => __( 'Border Radius', 'easy-woo-quick-view' ),
                 ),
                 array(
                     'id'      => 'ewqv_btn_border_radius_top',
@@ -316,7 +316,7 @@ class Easy_WooCommerce_Quick_View_Settings {
             // Modal Settings
             CSF::createSection( $prefix, array(
             'name'   => 'ewqv_modal_settings',
-            'title'  => __( 'Modal Settings', 'easy-woo-quick-view' ),
+            'title'  => __( 'Modal', 'easy-woo-quick-view' ),
             'fields' => array(
                 array(
                     'type'    => 'subheading',
@@ -325,7 +325,7 @@ class Easy_WooCommerce_Quick_View_Settings {
                 array(
                     'id'                => 'ewqv_modal_width_height',
                     'type'              => 'dimensions',
-                    'title'             => __( 'Modal Size', 'easy-woo-quick-view' ),
+                    'title'             => __( 'Modal size', 'easy-woo-quick-view' ),
                     'subtitle'          => __( 'For best results, use 2:1 width-to-height ratio.', 'easy-woo-quick-view' ),
                 ),
                 array(
@@ -337,7 +337,7 @@ class Easy_WooCommerce_Quick_View_Settings {
                 array(
                     'id'                => 'ewqv_modal_bg_color',
                     'type'              => 'color',
-                    'title'             => __( 'Background Color', 'easy-woo-quick-view' ),
+                    'title'             => __( 'Background color', 'easy-woo-quick-view' ),
                     'output_mode'       => 'background',
                     'output_important'  => true,
                     'output'            => '.easy-wqv-product-modal',
@@ -346,7 +346,7 @@ class Easy_WooCommerce_Quick_View_Settings {
                 array(
                     'id'                => 'ewqv_modal_bg_overlay',
                     'type'              => 'color',
-                    'title'             => __( 'Background Overlay Color', 'easy-woo-quick-view' ),
+                    'title'             => __( 'Background overlay color', 'easy-woo-quick-view' ),
                     'output_mode'       => 'background',
                     'output_important'  => true,
                     'output'            => '.mfp-bg.mfp-ewqv',
@@ -354,18 +354,18 @@ class Easy_WooCommerce_Quick_View_Settings {
                 ),
                 array(
                     'type'              => 'subheading',
-                    'content'           => __( 'Close Button Setting', 'easy-woo-quick-view' ),
+                    'content'           => __( 'Close Button', 'easy-woo-quick-view' ),
                 ),
                 array(
                     'id'                => 'ewqv_close_btn_switch',
                     'type'              => 'switcher',
                     'default'           => true,
-                    'title'             => __( 'Button Show/Hide', 'easy-woo-quick-view' ),
+                    'title'             => __( 'Button show/hide', 'easy-woo-quick-view' ),
                 ),
                 array(
                     'id'                => 'ewqv_close_btn_switch_bg',
                     'type'              => 'color',
-                    'title'             => __( 'Button Background Color', 'easy-woo-quick-view' ),
+                    'title'             => __( 'Button background color', 'easy-woo-quick-view' ),
                     'output_mode'       => 'background',
                     'output_important'  => true,
                     'output'            => '.easy-wqv-product-modal .mfp-close',
@@ -374,7 +374,7 @@ class Easy_WooCommerce_Quick_View_Settings {
                 array(
                     'id'                => 'ewqv_close_btn_switch_bg_hover',
                     'type'              => 'color',
-                    'title'             => __( 'Button Background Hover Color', 'easy-woo-quick-view' ),
+                    'title'             => __( 'Button background hover color', 'easy-woo-quick-view' ),
                     'output_mode'       => 'background',
                     'output_important'  => true,
                     'output'            => '.easy-wqv-product-modal .mfp-close:hover',
@@ -383,7 +383,7 @@ class Easy_WooCommerce_Quick_View_Settings {
                 array(
                     'id'                => 'ewqv_close_btn_switch_color',
                     'type'              => 'color',
-                    'title'             => __( 'Button Icon Color', 'easy-woo-quick-view' ),
+                    'title'             => __( 'Button icon color', 'easy-woo-quick-view' ),
                     'output_important'  => true,
                     'output'            => '.easy-wqv-product-modal .mfp-close',
                     'default'           => '#333'
@@ -391,19 +391,19 @@ class Easy_WooCommerce_Quick_View_Settings {
                 array(
                     'id'                => 'ewqv_close_btn_switch_hover_color',
                     'type'              => 'color',
-                    'title'             => __( 'Button Icon Hover Color', 'easy-woo-quick-view' ),
+                    'title'             => __( 'Button icon hover color', 'easy-woo-quick-view' ),
                     'output_important'  => true,
                     'output'            => '.easy-wqv-product-modal .mfp-close:hover',
                     'default'           => '#fff'
                 ),
                 array(
                     'type'              => 'subheading',
-                    'content'           => __( 'Scrollbar Setting', 'easy-woo-quick-view' ),
+                    'content'           => __( 'Scrollbar', 'easy-woo-quick-view' ),
                 ),
                 array(
                     'id'                => 'ewqv_scrollbar_bg',
                     'type'              => 'color',
-                    'title'             => __( 'Scrollbar Background', 'easy-woo-quick-view' ),
+                    'title'             => __( 'Scrollbar background color', 'easy-woo-quick-view' ),
                     'output_mode'       => 'background',
                     'default'           => '#333333'
                 ),     
@@ -413,61 +413,61 @@ class Easy_WooCommerce_Quick_View_Settings {
             // Thumbnails Settings
             CSF::createSection( $prefix, array(
                 'name'   => 'ewqv_thumbnails_settings',
-                'title'  => __( 'Thumbnails Settings', 'easy-woo-quick-view' ),
+                'title'  => __( 'Thumbnails', 'easy-woo-quick-view' ),
                 'fields' => array(
                     array(
                         'type'              => 'subheading',
-                        'content'           => __( 'Slider Setting', 'easy-woo-quick-view' ),
+                        'content'           => __( 'Slider', 'easy-woo-quick-view' ),
                     ),
                     array(
                         'id'                => 'ewqv_slider_dot_switch',
                         'type'              => 'switcher',
                         'default'           => true,
-                        'title'             => __( 'Slider Dot Show/Hide', 'easy-woo-quick-view' ),
+                        'title'             => __( 'Slider dot show/hide', 'easy-woo-quick-view' ),
                     ),
                     array(
                         'id'      => 'ewqv_slider_btn_icon_size',
                         'type'    => 'number',
-                        'title'   => __( 'Slider Icon size', 'easy-woo-quick-view' ),
+                        'title'   => __( 'Slider icon size', 'easy-woo-quick-view' ),
                         'default' => 24,
                         'unit'    => 'px',
                     ),
                     array(
                         'id'      => 'ewqv_slider_btn_icon_color',
                         'type'    => 'color',
-                        'title'   => __( 'Slider Icon Color', 'easy-woo-quick-view' ),
+                        'title'   => __( 'Slider icon color', 'easy-woo-quick-view' ),
                         'default' => '#222'
                     ),
                     array(
                         'id'      => 'ewqv_slider_btn_icon_hover_color',
                         'type'    => 'color',
-                        'title'   => __( 'Slider Icon Hover Color', 'easy-woo-quick-view' ),
+                        'title'   => __( 'Slider icon hover color', 'easy-woo-quick-view' ),
                         'default' => '#fff'
                     ),
                     array(
                         'id'      => 'ewqv_slider_btn_icon_bg_color',
                         'type'    => 'color',
-                        'title'   => __( 'Slider Icon Background Color', 'easy-woo-quick-view' ),
+                        'title'   => __( 'Slider icon background color', 'easy-woo-quick-view' ),
                         'output_mode'   => 'background-color',
                         'default' => 'transparent'
                     ),
                     array(
                         'id'      => 'ewqv_slider_btn_icon_bg_hover_color',
                         'type'    => 'color',
-                        'title'   => __( 'Slider Icon Background Hover Color', 'easy-woo-quick-view' ),
+                        'title'   => __( 'Slider icon background hover color', 'easy-woo-quick-view' ),
                         'output_mode'   => 'background-color',
                         'default' => '#00000080'
                     ),
                     array(
                         'id'            => 'ewqv_slider_btn_left_icon',
                         'type'          => 'icon',
-                        'title'         => __( 'Slider Left Icon', 'easy-woo-quick-view' ),
+                        'title'         => __( 'Slider left icon', 'easy-woo-quick-view' ),
                         'default'       => 'fas fa-chevron-left',
                     ),
                     array(
                         'id'            => 'ewqv_slider_btn_right_icon',
                         'type'          => 'icon',
-                        'title'         => __( 'Slider Right Icon', 'easy-woo-quick-view' ),
+                        'title'         => __( 'Slider right icon', 'easy-woo-quick-view' ),
                         'default'       => 'fas fa-chevron-right',
                     ),
                 )
@@ -475,12 +475,12 @@ class Easy_WooCommerce_Quick_View_Settings {
             // Content Settings
             CSF::createSection( $prefix, array(
                 'name'   => 'ewqv_content_settings',
-                'title'  => __( 'Content Settings', 'easy-woo-quick-view' ),
+                'title'  => __( 'Content', 'easy-woo-quick-view' ),
                 'fields' => array(
                     array(
                         'id'                => 'ewqv_modal_content_padding',
                         'type'              => 'spacing',
-                        'title'             => __( 'Content Wrapper Padding', 'easy-woo-quick-view' ),
+                        'title'             => __( 'Content wrapper padding', 'easy-woo-quick-view' ),
                         'output'            => '.easy-wqv-summary-wrapper',
                         'output_mode'       => 'padding',
                         'output_important'  => true,
@@ -494,7 +494,7 @@ class Easy_WooCommerce_Quick_View_Settings {
                     ),
                     array(
                         'type'              => 'subheading',
-                        'content'           => __( 'Product Info Show/Hide Options', 'easy-woo-quick-view' ),
+                        'content'           => __( 'Product info show/hide options', 'easy-woo-quick-view' ),
                     ),
                     array(
                         'id'                => 'ewqv_title_switch',
@@ -558,12 +558,12 @@ class Easy_WooCommerce_Quick_View_Settings {
                         'id'                => 'ewqv_review_link_switch',
                         'type'              => 'switcher',
                         'default'           => true,
-                        'title'             => __( 'Review Link', 'easy-woo-quick-view' ),
+                        'title'             => __( 'Review link', 'easy-woo-quick-view' ),
                     ),
                     array(
                         'id'                => 'ewqv_content_review_color',
                         'type'              => 'color',
-                        'title'             => __( 'Review Color', 'easy-woo-quick-view' ),
+                        'title'             => __( 'Review color', 'easy-woo-quick-view' ),
                         'output_important'  => true,
                         'output'            => '.easy-wqv-summary-content .woocommerce-product-rating .woocommerce-review-link',
                         'default'           => '#222'
@@ -571,7 +571,7 @@ class Easy_WooCommerce_Quick_View_Settings {
                     array(
                         'id'                => 'ewqv_content_rating_color',
                         'type'              => 'color',
-                        'title'             => __( 'Rating Color', 'easy-woo-quick-view' ),
+                        'title'             => __( 'Rating color', 'easy-woo-quick-view' ),
                         'output_important'  => true,
                         'output'            => '.easy-wqv-summary-content .woocommerce-product-rating .star-rating',
                         'default'           => '#dd9933'
@@ -608,12 +608,12 @@ class Easy_WooCommerce_Quick_View_Settings {
                         'id'                => 'ewqv_content_variation_description',
                         'type'              => 'switcher',
                         'default'           => false,
-                        'title'             => __( 'Variation Description', 'easy-woo-quick-view' ),
+                        'title'             => __( 'Variation description', 'easy-woo-quick-view' ),
                     ),
                     array(
                         'id'                => 'ewqv_content_variation_label_color',
                         'type'              => 'color',
-                        'title'             => __( 'Label Color', 'easy-woo-quick-view' ),
+                        'title'             => __( 'Label color', 'easy-woo-quick-view' ),
                         'output_important'  => true,
                         'output'            => '.easy-wqv-summary-content .variations_form .variations th',
                         'default'           => '#222'
@@ -621,7 +621,7 @@ class Easy_WooCommerce_Quick_View_Settings {
                     array(
                         'id'                => 'ewqv_content_variation_value_color',
                         'type'              => 'color',
-                        'title'             => __( 'Value Color', 'easy-woo-quick-view' ),
+                        'title'             => __( 'Value color', 'easy-woo-quick-view' ),
                         'output_important'  => true,
                         'output'            => '.easy-wqv-summary-content .variations_form .variations td select',
                         'default'           => '#222'
@@ -633,7 +633,7 @@ class Easy_WooCommerce_Quick_View_Settings {
                     array(
                         'id'                => 'ewqv_content_add_to_cart_bg',
                         'type'              => 'color',
-                        'title'             => __( 'Button Background Color', 'easy-woo-quick-view' ),
+                        'title'             => __( 'Button background color', 'easy-woo-quick-view' ),
                         'output_mode'       => 'background',
                         'output_important'  => true,
                         'output'            => '.easy-wqv-summary-content .cart .single_add_to_cart_button',
@@ -642,7 +642,7 @@ class Easy_WooCommerce_Quick_View_Settings {
                     array(
                         'id'                => 'ewqv_content_add_to_cart_bg_hover',
                         'type'              => 'color',
-                        'title'             => __( 'Button Background Hover Color', 'easy-woo-quick-view' ),
+                        'title'             => __( 'Button background hover color', 'easy-woo-quick-view' ),
                         'output_mode'       => 'background',
                         'output_important'  => true,
                         'output'            => '.easy-wqv-summary-content .cart .single_add_to_cart_button:hover',
@@ -651,7 +651,7 @@ class Easy_WooCommerce_Quick_View_Settings {
                     array(
                         'id'                => 'ewqv_content_add_to_cart_text_color',
                         'type'              => 'color',
-                        'title'             => __( 'Button Text Color', 'easy-woo-quick-view' ),
+                        'title'             => __( 'Button text color', 'easy-woo-quick-view' ),
                         'output_important'  => true,
                         'output'            => '.easy-wqv-summary-content .cart .single_add_to_cart_button',
                         'default'           => '#ffffff'
@@ -659,7 +659,7 @@ class Easy_WooCommerce_Quick_View_Settings {
                     array(
                         'id'                => 'ewqv_content_add_to_cart_text_hover_color',
                         'type'              => 'color',
-                        'title'             => __( 'Button Text Hover Color', 'easy-woo-quick-view' ),
+                        'title'             => __( 'Button text hover color', 'easy-woo-quick-view' ),
                         'output_important'  => true,
                         'output'            => '.easy-wqv-summary-content .cart .single_add_to_cart_button:hover',
                         'default'           => '#ffffff'
@@ -667,7 +667,7 @@ class Easy_WooCommerce_Quick_View_Settings {
                     array(
                         'id'               => 'ewqv_content_add_to_cart_btn_padding',
                         'type'             => 'spacing',
-                        'title'            => __( 'Button Padding', 'easy-woo-quick-view' ),
+                        'title'            => __( 'Button padding', 'easy-woo-quick-view' ),
                         'output'           => '.easy-wqv-summary-content .cart .single_add_to_cart_button',
                         'output_mode'      => 'padding',
                         'output_important' => true,
@@ -682,7 +682,7 @@ class Easy_WooCommerce_Quick_View_Settings {
                     array(
                         'id'               => 'ewqv_content_add_to_cart_btn_margin',
                         'type'             => 'spacing',
-                        'title'            => __( 'Button Margin', 'easy-woo-quick-view' ),
+                        'title'            => __( 'Button margin', 'easy-woo-quick-view' ),
                         'output'           => '.easy-wqv-summary-content .cart .single_add_to_cart_button',
                         'output_mode'      => 'margin',
                         'output_important' => true,
@@ -697,7 +697,7 @@ class Easy_WooCommerce_Quick_View_Settings {
                     array(
                         'id'               => 'ewqv_content_add_to_cart_btn_border',
                         'type'             => 'border',
-                        'title'            => __( 'Button Border', 'easy-woo-quick-view' ),
+                        'title'            => __( 'Button border', 'easy-woo-quick-view' ),
                         'output'           => '.easy-wqv-summary-content .cart .single_add_to_cart_button',
                         'output_important' => true,
                         'default'          => array(
@@ -712,7 +712,7 @@ class Easy_WooCommerce_Quick_View_Settings {
                     ),
                     array(
                         'type'    => 'subheading',
-                        'content' => __( 'Button Border radius', 'easy-woo-quick-view' ),
+                        'content' => __( 'Button Border Radius', 'easy-woo-quick-view' ),
                     ),
                     array(
                         'id'      => 'ewqv_content_add_to_cart_btn_border_radius_top',
@@ -749,7 +749,7 @@ class Easy_WooCommerce_Quick_View_Settings {
                     array(
                         'id'                => 'ewqv_content_meta_color',
                         'type'              => 'color',
-                        'title'             => __( 'Text Color', 'easy-woo-quick-view' ),
+                        'title'             => __( 'Text color', 'easy-woo-quick-view' ),
                         'output_important'  => true,
                         'output'            => '.easy-wqv-summary-content .product_meta, .easy-wqv-summary-content .product_meta .sku_wrapper, .easy-wqv-summary-content .product_meta .posted_in',
                         'default'           => '#222'
@@ -757,7 +757,7 @@ class Easy_WooCommerce_Quick_View_Settings {
                     array(
                         'id'                => 'ewqv_content_meta_link_color',
                         'type'              => 'color',
-                        'title'             => __( 'Link Color', 'easy-woo-quick-view' ),
+                        'title'             => __( 'Link color', 'easy-woo-quick-view' ),
                         'output_important'  => true,
                         'output'            => '.easy-wqv-summary-content .product_meta a',
                         'default'           => '#1e73be'
