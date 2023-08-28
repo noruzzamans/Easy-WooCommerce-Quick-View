@@ -110,6 +110,23 @@ class Easy_WooCommerce_Quick_View_Settings {
                     'dependency'    => array( 'ewqv_icon_switch', '==', 'true' )
                 ),
                 array(
+                    'id'                => 'ewqv_btn_icon_font_size',
+                    'type'              => 'number',
+                    'unit'              => 'px',
+                    'title'             => __( 'Icon font size', 'boomdevs-toc' ),
+                    'default'           => 16,
+                    'dependency'    => array( 'ewqv_icon_switch', '==', 'true' )
+                ),
+                array(
+                    'id'                => 'ewqv_btn_icon_font_color',
+                    'type'              => 'color',
+                    'title'             => __( 'Icon color', 'easy-woo-quick-view' ),
+                    'output_important'  => true,
+                    'output'            => '.easy_woo_quick_view_btn i',
+                    'default'           => '#ffffff',
+                    'dependency'    => array( 'ewqv_icon_switch', '==', 'true' )
+                ),
+                array(
                     'id'          => 'ewqv_btn_icon_select',
                     'type'        => 'select',
                     'title'       => __( 'Icon position', 'easy-woo-quick-view' ),
@@ -149,6 +166,25 @@ class Easy_WooCommerce_Quick_View_Settings {
                         'unit'   => 'px',
                     ),
                     'dependency'    => array( 'ewqv_icon_switch', '==', 'true')
+                ),
+                array(
+                    'id'            => 'ewqv_icon_only_switch',
+                    'type'          => 'switcher',
+                    'default'       => false,
+                    'title'         => __( 'Enable icon only', 'easy-woo-quick-view' ),
+                    'dependency'    => array( 'ewqv_icon_switch', '==', 'true' )
+                ),
+                array(
+                    'id'       => 'ewqv_icon_btn_style',
+                    'type'     => 'select',
+                    'title'    => __( 'Icon button style', 'easy-woo-quick-view' ),
+                    'options'  => array(
+                        'square'        => __( 'Square', 'easy-woo-quick-view' ),
+                        'round'        => __( 'Round', 'easy-woo-quick-view' ),
+                        'rounded_square'        => __( 'Rounded square', 'easy-woo-quick-view' ),
+                    ),
+                    'default'  => 'square',
+                    'dependency'    => array( 'ewqv_icon_only_switch', '==', 'true' )
                 ),
                 array(
                     'id'         => 'ewqv_btn_align_position_top',
