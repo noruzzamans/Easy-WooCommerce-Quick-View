@@ -26,8 +26,8 @@ class Easy_WooCommerce_Quick_View_Btn {
 
     public function __construct() {
 
-        $settings = Easy_WooCommerce_Quick_View_Settings::get_settings();
-        $ewqv_position = isset($settings['ewqv_btn_position']) ? $settings['ewqv_btn_position'] : '';
+        $settings       = Easy_WooCommerce_Quick_View_Settings::get_settings();
+        $ewqv_position  = isset($settings['ewqv_btn_position']) ? $settings['ewqv_btn_position'] : '';
         
         if ( ! empty( $ewqv_position ) ) {
             switch ($ewqv_position) {
@@ -61,8 +61,8 @@ class Easy_WooCommerce_Quick_View_Btn {
 	}
 
     public function add_easy_woo_quick_view_button(){
-        $settings  = Easy_WooCommerce_Quick_View_Settings::get_settings();
-        $ewqv_switch = isset( $settings['ewqv_switch'] ) ? $settings['ewqv_switch'] : false;
+        $settings       = Easy_WooCommerce_Quick_View_Settings::get_settings();
+        $ewqv_switch    = isset( $settings['ewqv_switch'] ) ? $settings['ewqv_switch'] : false;
         if($ewqv_switch){
             echo  $this->add_easy_woo_quick_view_buton_html();
         }
@@ -70,12 +70,12 @@ class Easy_WooCommerce_Quick_View_Btn {
     }
 
     public function add_easy_woo_quick_view_buton_html() {
-        $settings  = Easy_WooCommerce_Quick_View_Settings::get_settings();
+        $settings       = Easy_WooCommerce_Quick_View_Settings::get_settings();
         $ewqv_btn_label = $settings['ewqv_btn_label'];
 
         global $product;
-        $label = $ewqv_btn_label;
-        $product_id = $product->get_id();
+        $label          = $ewqv_btn_label;
+        $product_id     = $product->get_id();
         
         return '<button id="easy_woo_quick_view_btn" class="easy_woo_quick_view_btn button" data-product-id="'. $product_id .'">'. $label .'</button>';
     }

@@ -71,9 +71,9 @@ class Easy_WooCommerce_Quick_View_Ajax {
 		}
 	
 		global $post, $product;
-		$product_id = isset( $_POST['product_id'] ) ? absint( $_POST['product_id'] ) : 0;
-		$product = wc_get_product( $product_id );
-		$product_name = $product->get_name();
+		$product_id 	= isset( $_POST['product_id'] ) ? absint( $_POST['product_id'] ) : 0;
+		$product 		= wc_get_product( $product_id );
+		$product_name 	= $product->get_name();
 	
 		// Get an array of attachment IDs for product images
 		$attachment_ids = array();
