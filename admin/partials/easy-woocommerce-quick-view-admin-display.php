@@ -5,7 +5,6 @@
  *
  * This file is used to markup the admin-facing aspects of the plugin.
  *
- * @link       https://github.com/noruzzamanrubel
  * @since      1.0.0
  *
  * @package    Easy_Woocommerce_Quick_View
