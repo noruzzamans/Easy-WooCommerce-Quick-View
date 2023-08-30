@@ -6,6 +6,15 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
+/**
+ * Class Easy_WooCommerce_Quick_View_Ajax.
+ *
+ * This class handles the AJAX functionality for the quick view feature in WooCommerce. It manages the display
+ * of product information in a modal when the quick view button is clicked, and handles actions related to
+ * quick view, such as avoiding redirection on "Add to Cart".
+ *
+ * @since 1.0.0
+ */
 class Easy_WooCommerce_Quick_View_Ajax {
 
 	/**
@@ -14,7 +23,9 @@ class Easy_WooCommerce_Quick_View_Ajax {
     protected static $instance;
 
     /**
-     * Returns single instance of the class
+     * Returns the single instance of the class.
+     *
+     * @return Easy_WooCommerce_Quick_View_Ajax Singleton instance of the class.
      */
     public static function get_instance() {
         if ( is_null( self::$instance ) ) {
@@ -24,8 +35,14 @@ class Easy_WooCommerce_Quick_View_Ajax {
         return self::$instance;
     }
 
+	/**
+     * Class Constructor.
+     *
+     * Initializes the class and sets up action hooks and filters for AJAX functionality related to quick view.
+     *
+     * @since 1.0.0
+     */
 	public function __construct() {
-
 		add_action( 'wp_ajax_easy_woocommerce_quick_view', [$this, 'easy_woocommerce_quick_view'] );
         add_action( 'wp_ajax_nopriv_easy_woocommerce_quick_view', [$this, 'easy_woocommerce_quick_view'] );
 
@@ -63,11 +80,18 @@ class Easy_WooCommerce_Quick_View_Ajax {
 		add_filter( 'woocommerce_add_to_cart_form_action', array( $this, 'easy_woocommerce_quick_view_avoid_redirecting_to_single_page' ), 10, 1 );
 	}
 
+	/**
+     * Handles the quick view AJAX request.
+     *
+     * Retrieves product information and displays it in a modal when the quick view button is clicked.
+     *
+     * @since 1.0.0
+     */
 	public function easy_woocommerce_quick_view() {
 		$nonce = $_POST['nonce'];
 	
 		if ( ! wp_verify_nonce( $nonce, 'easy_woocommerce_quick_view_nonce' ) ) {
-			die( 'Nonce not verified!' );
+			die( esc_html__('Nonce not verified!', 'easy-woo-quick-view') );
 		}
 	
 		global $post, $product;
@@ -75,22 +99,22 @@ class Easy_WooCommerce_Quick_View_Ajax {
 		$product 		= wc_get_product( $product_id );
 		$product_name 	= $product->get_name();
 	
-		// Get an array of attachment IDs for product images
+		/** Get an array of attachment IDs for product images */
 		$attachment_ids = array();
 		
-		// Add featured image
+		/** Add featured image */
 		$featured_image_id = get_post_thumbnail_id( $product_id );
 		if ( $featured_image_id ) {
 			$attachment_ids[] = $featured_image_id;
 		}
 	
-		// Add gallery images
+		/** Add gallery images */
 		$gallery_attachment_ids = $product->get_gallery_image_ids();
 		if ( ! empty( $gallery_attachment_ids ) ) {
 			$attachment_ids = array_merge( $attachment_ids, $gallery_attachment_ids );
 		}
 	
-		// Remove duplicates and re-index the array
+		/** Remove duplicates and re-index the array */
 		$attachment_ids = array_values( array_unique( $attachment_ids ) );
 	
 		if ( $product && ! empty( $attachment_ids ) ) {
@@ -119,17 +143,24 @@ class Easy_WooCommerce_Quick_View_Ajax {
 		wp_die();
 	}
 	
-	/**
-	 * Check if is quick view
-	 */
+    /**
+     * Checks if the current action is a quick view AJAX request.
+     *
+     * @return bool Whether the current action is a quick view AJAX request.
+     * @since 1.0.0
+     */
 	public function easy_woocommerce_quick_view_is_quick_view() {
-        // phpcs:ignore WordPress.Security.NonceVerification.Recommended
+        /** phpcs:ignore WordPress.Security.NonceVerification.Recommended */
         return ( defined( 'DOING_AJAX' ) && DOING_AJAX && isset( $_REQUEST['action'] ) && 'easy_woocommerce_quick_view' === $_REQUEST['action'] );
     }
 
-	/**
-	 * Avoid redirect to single product page on add to cart action in quick view
-	 */
+    /**
+     * Avoids redirecting to single product page on "Add to Cart" in quick view.
+     *
+     * @param string $value The current action URL.
+     * @return string Modified action URL.
+     * @since 1.0.0
+     */
 	public function easy_woocommerce_quick_view_avoid_redirecting_to_single_page($value){
 		if ( $this->easy_woocommerce_quick_view_is_quick_view() ) {
             return '';
@@ -138,4 +169,5 @@ class Easy_WooCommerce_Quick_View_Ajax {
 	}
 
 }
+/** Initialize the class instance. */
 Easy_WooCommerce_Quick_View_Ajax::get_instance();
