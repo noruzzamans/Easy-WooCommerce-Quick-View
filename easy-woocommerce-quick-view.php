@@ -8,7 +8,6 @@
  * registers the activation and deactivation functions, and defines a function
  * that starts the plugin.
  *
- * @link              https://github.com/noruzzamanrubel
  * @since             1.0.0
  * @package           Easy_Woocommerce_Quick_View
  *
@@ -25,9 +24,9 @@
  * Domain Path:       /languages
  */
 
-// If this file is called directly, abort.
-if ( ! defined( 'WPINC' ) ) {
-	die;
+/** If this file is called directly, abort. */
+if ( ! defined( 'ABSPATH' ) ) {
+	exit;
 }
 
 /**
