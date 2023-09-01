@@ -49,23 +49,22 @@
 						});
 					}
 
-				/** Check if there are gallery images */
-				let hasGalleryImages = $('#easy-wqv-image-slider .easy-wqv-product-image').length > 1;
-				let left_icon = ewqv_slidrt_icon.left;
-				let right_icon = ewqv_slidrt_icon.right;
-				
-				/** Initialize Slick slider only if there are gallery images */
-				if (hasGalleryImages) {
-					$('#easy-wqv-image-slider').slick({
-						/**  Slick slider options */
-						dots: true,
-						infinite: true,
-						slidesToShow: 1,
-						slidesToScroll: 1,
-						prevArrow: `<button type="button" class="slick-prev"><i class="${left_icon}"></i></button>`,
-						nextArrow: `<button type="button" class="slick-next"><i class="${right_icon}"></i></button>`
-					});
-				}
+					/** Check if there are gallery images */
+					let hasGalleryImages = $('#easy-wqv-image-slider .easy-wqv-product-image').length > 1;
+					let left_icon = ewqv_slidrt_icon.left;
+					let right_icon = ewqv_slidrt_icon.right;
+					
+					/** Initialize Slick slider only if there are gallery images */
+					if (hasGalleryImages) {
+						$('#easy-wqv-image-slider').slick({
+							dots: true,
+							infinite: true,
+							slidesToShow: 1,
+							slidesToScroll: 1,
+							prevArrow: `<button type="button" class="slick-prev"><i class="${left_icon}"></i></button>`,
+							nextArrow: `<button type="button" class="slick-next"><i class="${right_icon}"></i></button>`
+						});
+					}
 				},
 				error: function() {
 					console.log('Error retrieving product details.');
