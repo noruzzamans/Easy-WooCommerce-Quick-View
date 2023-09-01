@@ -1,24 +1,14 @@
 <?php
 
 /**
- * The admin-specific functionality of the plugin.
+ * Admin functionality for the Easy WooCommerce Quick View plugin.
  *
- * @link       https://github.com/noruzzamanrubel
+ * This class defines the plugin's name, version, and handles the enqueuing
+ * of admin-specific styles and JavaScript.
+ *
+ * @package    Easy_Woocommerce_Quick_View
+ * @subpackage Easy_Woocommerce_Quick_View/admin
  * @since      1.0.0
- *
- * @package    Easy_Woocommerce_Quick_View
- * @subpackage Easy_Woocommerce_Quick_View/admin
- */
-
-/**
- * The admin-specific functionality of the plugin.
- *
- * Defines the plugin name, version, and two examples hooks for how to
- * enqueue the admin-specific stylesheet and JavaScript.
- *
- * @package    Easy_Woocommerce_Quick_View
- * @subpackage Easy_Woocommerce_Quick_View/admin
- * @author     Noruzzaman <noruzzamanrubel@gmail.com>
  */
 class Easy_Woocommerce_Quick_View_Admin {
 
@@ -55,47 +45,21 @@ class Easy_Woocommerce_Quick_View_Admin {
 	}
 
 	/**
-	 * Register the stylesheets for the admin area.
+	 * Enqueue admin-specific styles.
 	 *
 	 * @since    1.0.0
 	 */
 	public function enqueue_styles() {
-
-		/**
-		 * This function is provided for demonstration purposes only.
-		 *
-		 * An instance of this class should be passed to the run() function
-		 * defined in Easy_Woocommerce_Quick_View_Loader as all of the hooks are defined
-		 * in that particular class.
-		 *
-		 * The Easy_Woocommerce_Quick_View_Loader will then create the relationship
-		 * between the defined hooks and the functions defined in this
-		 * class.
-		 */
-
 		wp_enqueue_style( $this->plugin_name, plugin_dir_url( __FILE__ ) . 'css/easy-woocommerce-quick-view-admin.css', array(), $this->version, 'all' );
 
 	}
 
 	/**
-	 * Register the JavaScript for the admin area.
+	 * Enqueue admin-specific JavaScript.
 	 *
 	 * @since    1.0.0
 	 */
 	public function enqueue_scripts() {
-
-		/**
-		 * This function is provided for demonstration purposes only.
-		 *
-		 * An instance of this class should be passed to the run() function
-		 * defined in Easy_Woocommerce_Quick_View_Loader as all of the hooks are defined
-		 * in that particular class.
-		 *
-		 * The Easy_Woocommerce_Quick_View_Loader will then create the relationship
-		 * between the defined hooks and the functions defined in this
-		 * class.
-		 */
-
 		wp_enqueue_script( $this->plugin_name, plugin_dir_url( __FILE__ ) . 'js/easy-woocommerce-quick-view-admin.js', array( 'jquery' ), $this->version, false );
 
 	}
