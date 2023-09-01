@@ -3,6 +3,7 @@
 
 	$(document).ready(function() {
 
+		/** Check if ewqv_btn is defined and has an icon property */
 		if (typeof ewqv_btn !== 'undefined' && ewqv_btn.icon) {
 			let iconClass = ewqv_btn.icon;
 			let iconElement = $('<i class="' + iconClass + '"></i>');
@@ -13,12 +14,12 @@
 			}
 		}
 
-
+		/** Click event handler for the quick view button */
 		$('.easy_woo_quick_view_btn').on('click', function(e) {
 			e.preventDefault();
 			let productId = $(this).data('product-id');
 
-			// AJAX request to retrieve the product details
+			/** AJAX request to retrieve the product details */
 			$.ajax({
 				url: easy_woocommerce_quick_view.ajax_url,
 				type: 'POST',
@@ -28,7 +29,7 @@
 					product_id: productId
 				},
 				success: function(response) {
-					// Open the Magnific Popup and display the product details
+					/** Open the Magnific Popup and display the product details */
 					$.magnificPopup.open({
 						items: {
 							src: response
@@ -39,20 +40,24 @@
 						closeOnBgClick: true,
 						showCloseBtn: true,
 					});
+
+					/** Initialize WooCommerce variation forms if WooCommerce is active. */
 					if (typeof wc_add_to_cart_variation_params !== 'undefined') {
 						var form_variation = $('.easy-wqv-product-modal').find('.variations_form');
 						form_variation.each(function () {
 							$(this).wc_variation_form();
 						});
 					}
-				// Check if there are gallery images
+
+				/** Check if there are gallery images */
 				let hasGalleryImages = $('#easy-wqv-image-slider .easy-wqv-product-image').length > 1;
 				let left_icon = ewqv_slidrt_icon.left;
 				let right_icon = ewqv_slidrt_icon.right;
-				// Initialize Slick slider only if there are gallery images
+				
+				/** Initialize Slick slider only if there are gallery images */
 				if (hasGalleryImages) {
 					$('#easy-wqv-image-slider').slick({
-						// Other options
+						/**  Slick slider options */
 						dots: true,
 						infinite: true,
 						slidesToShow: 1,
