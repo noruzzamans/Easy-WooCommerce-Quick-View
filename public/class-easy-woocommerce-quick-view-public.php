@@ -109,6 +109,9 @@ class Easy_Woocommerce_Quick_View_Public {
         $ewqv_btn_icon_margin_right 		= isset($settings['ewqv_btn_icon_margin_right']['right']) ? $settings['ewqv_btn_icon_margin_right']['right'] : '';
         $ewqv_btn_icon_margin_left 			= isset($settings['ewqv_btn_icon_margin_left']['left']) ? $settings['ewqv_btn_icon_margin_left']['left'] : '';
 
+		/** Retrieve loading animation settings. */
+        $ewqv_loading_switch 			= isset($settings['ewqv_loading_switch']) ? $settings['ewqv_loading_switch'] : '';
+
         ?>
 
         <style>
@@ -245,6 +248,11 @@ class Easy_Woocommerce_Quick_View_Public {
 					display: none !important;
 				}
 			<?php endif; ?>
+			<?php if($ewqv_loading_switch == '0') : ?>
+				.loading-overlay .loading-text {
+					display: none !important;
+				}
+			<?php endif; ?>
         </style>
         <?php
 
@@ -303,6 +311,9 @@ class Easy_Woocommerce_Quick_View_Public {
 		$ewqv_slider_btn_left_icon				= isset($settings['ewqv_slider_btn_left_icon']) ? $settings['ewqv_slider_btn_left_icon'] : '';
 		$ewqv_slider_btn_right_icon				= isset($settings['ewqv_slider_btn_right_icon']) ? $settings['ewqv_slider_btn_right_icon'] : '';
 
+		/** Retrieve loading animation text. */
+		$ewqv_loading_text 						= isset($settings['ewqv_loading_text']) ? $settings['ewqv_loading_text'] : '';
+
 		/** Localize script with button icon data if icon switch is enabled. */
 		if ($ewqv_icon_switch) {
 			wp_localize_script($this->plugin_name, 'ewqv_btn', array(
@@ -315,6 +326,11 @@ class Easy_Woocommerce_Quick_View_Public {
 		wp_localize_script($this->plugin_name, 'ewqv_slidrt_icon', array(
 			'left' 				=> $ewqv_slider_btn_left_icon,
 			'right' 			=> $ewqv_slider_btn_right_icon,
+		));
+
+		/** Localize script with loading animation text. */
+		wp_localize_script($this->plugin_name, 'loading', array(
+			'animation_text' 	=> $ewqv_loading_text,
 		));
 	}
 

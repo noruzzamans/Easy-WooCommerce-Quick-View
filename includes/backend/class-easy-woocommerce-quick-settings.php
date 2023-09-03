@@ -442,7 +442,33 @@ class Easy_WooCommerce_Quick_View_Settings {
                     'title'             => esc_html__( 'Scrollbar background color', 'easy-woo-quick-view' ),
                     'output_mode'       => 'background',
                     'default'           => esc_html__( '#333', 'easy-woo-quick-view' ),
-                ),     
+                ),
+                array(
+                    'type'              => 'subheading',
+                    'content'           => esc_html__( 'Loading Animation', 'easy-woo-quick-view' ),
+                ),
+                array(
+                    'id'                => 'ewqv_loading_switch',
+                    'type'              => 'switcher',
+                    'default'           => true,
+                    'title'             => esc_html__( 'Preloader', 'easy-woo-quick-view' ),
+                ),
+                array(
+                    'id'                => 'ewqv_loading_text',
+                    'type'              => 'text',
+                    'title'             => esc_html__( 'Loading text', 'easy-woo-quick-view' ),
+                    'default'           => esc_html__( 'Loading...', 'easy-woo-quick-view' ),
+                    'dependency'        => array( 'ewqv_loading_switch', '==', 'true' )
+                ),
+                array(
+                    'id'                => 'ewqv_loading_text_color',
+                    'type'              => 'color',
+                    'title'             => esc_html__( 'Loading text color', 'easy-woo-quick-view' ),
+                    'output_important'  => true,
+                    'output'            => '.loading-overlay .loading-text',
+                    'default'           => esc_html__( '#fff', 'easy-woo-quick-view' ),
+                    'dependency'        => array( 'ewqv_loading_switch', '==', 'true' ),
+                ),
             )
             ) );
 
