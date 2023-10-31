@@ -12,9 +12,9 @@
  * @package           Easy_Woocommerce_Quick_View
  *
  * @wordpress-plugin
- * Plugin Name:       Easy WooCommerce Quick View
- * Plugin URI:        https://#
- * Description:       Easy WooCommerce Quick View is a convenient and time-saving feature designed for online stores powered by WooCommerce, a popular e-commerce platform.
+ * Plugin Name:       Easy Quick View for WooCommerce
+ * Plugin URI:        https://wordpress.org/plugins/wc-easy-quick-view/
+ * Description:       Quick View for WooCommerce is a convenient and time-saving feature designed for online stores powered by WooCommerce, a popular e-commerce platform.
  * Version:           1.0.0
  * Author:            Noruzzaman
  * Author URI:        https://github.com/noruzzamanrubel
@@ -38,8 +38,8 @@ define( 'EASY_WOO_QUICK_VIEW_VERSION', '1.0.0' );
 define( 'EASY_WOO_QUICK_VIEW_PATH', plugin_dir_path( __FILE__ ) );
 define( 'EASY_WOO_QUICK_VIEW_URL', plugin_dir_url( __FILE__ ) );
 define( 'EASY_WOO_QUICK_VIEW_SLUG', 'easy-woo-quick-view' );
-define( 'EASY_WOO_QUICK_VIEW_NAME', 'Easy WooCommerce Quick View' );
-define( 'EASY_WOO_QUICK_VIEW_FULL_NAME', 'Easy WooCommerce Quick View' );
+define( 'EASY_WOO_QUICK_VIEW_NAME', 'Easy Quick View for WooCommerce' );
+define( 'EASY_WOO_QUICK_VIEW_FULL_NAME', 'Easy Quick View for WooCommerce' );
 define( 'EASY_WOO_QUICK_VIEW_BASE_NAME', plugin_basename( __FILE__ ) );
 
 /**
