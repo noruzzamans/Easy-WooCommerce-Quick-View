@@ -1,4 +1,4 @@
-=== Easy Quick View for WooCommerce ===
+=== Quick View for WooCommerce ===
 Contributors: noruzzaman
 Tags: products quick view, quick view, woocommerce, woocommerce quick view, quickview
 Requires at least: 5.0
