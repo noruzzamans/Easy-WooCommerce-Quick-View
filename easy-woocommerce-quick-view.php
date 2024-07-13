@@ -17,7 +17,7 @@
  * Description:       Quick View for WooCommerce is a convenient and time-saving feature designed for online stores powered by WooCommerce, a popular e-commerce platform.
  * Version:           1.1.0
  * Author:            Noruzzaman
- * Author URI:        https://github.com/noruzzamanrubel
+ * Author URI:        https://github.com/noruzzamans
  * License:           GPL-2.0+
  * License URI:       http://www.gnu.org/licenses/gpl-2.0.txt
  * Text Domain:       easy-woo-quick-view
