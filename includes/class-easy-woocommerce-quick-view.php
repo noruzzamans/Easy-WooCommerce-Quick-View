@@ -69,7 +69,7 @@ class Easy_Woocommerce_Quick_View {
 		if ( defined( 'EASY_WOO_QUICK_VIEW_VERSION' ) ) {
 			$this->version = EASY_WOO_QUICK_VIEW_VERSION;
 		} else {
-			$this->version = '1.1.0';
+			$this->version = '1.2.0';
 		}
 		$this->plugin_name = 'easy-woo-quick-view';
 
