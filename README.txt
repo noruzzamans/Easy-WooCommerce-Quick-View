@@ -2,8 +2,8 @@
 Contributors: noruzzaman
 Tags: products quick view, quick view, woocommerce, woocommerce quick view, quickview
 Requires at least: 5.0
-Tested up to: 6.4
-Stable tag: 1.1.0
+Tested up to: 6.6.1
+Stable tag: 1.2.0
 Requires PHP: 7.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -45,4 +45,7 @@ Yes, it’s completely free.
 == Changelog ==
 
 = 1.1.0 =
-Test: WordPress compatibility Upto 6.4
+Test: WordPress compatibility up to 6.4
+
+= 1.2.0 =
+Test: WordPress compatibility up to 6.6.1
